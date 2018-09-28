@@ -1,3 +1,3 @@
-﻿##react微信红包应用
+﻿## react微信红包应用
 
--启动：npm start
+- 启动：npm start
