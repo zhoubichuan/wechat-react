@@ -1,9 +1,10 @@
 import React, { Component } from "react";
 import "./get.css";
 // import { Link } from "react-router-dom";
-import NavPart from "./NavPart";
+import MessageListHeader from "./MessageListHeader";
 // import PopFloor from "./PopFloor";
-import GetPage from "./GetPage";
+import MessageListBody from "./MessageListBody";
+import MessageListFooter from "./MessageListFooter";
 
 class Get extends Component {
   constructor() {
@@ -19,11 +20,12 @@ class Get extends Component {
     var maskShow = this.state.maskShow;
     return (
       <div className={"get"}>
-        <NavPart />
-        <GetPage
+        <MessageListHeader />
+        <MessageListBody
           maskShow={maskShow}
           onUpdata={maskShow => this.ChildrenFunc(maskShow)}
         />
+        <MessageListFooter />
       </div>
     );
   }

@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 
-class NavPart extends Component {
+class MessageListHeader extends Component {
   render() {
     return (
       <div className={"nav"}>
@@ -18,4 +18,4 @@ class NavPart extends Component {
     );
   }
 }
-export default NavPart;
+export default MessageListHeader;

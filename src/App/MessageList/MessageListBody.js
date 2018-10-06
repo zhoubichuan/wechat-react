@@ -2,15 +2,17 @@ import React, { Component } from "react";
 import ListItem from "./ListItem";
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
+import RedBagPopFloor from "./RedBagPopFloor";
 
-class GetPage extends Component {
+class MessageListBody extends Component {
   static PropTypes = {
     bags: PropTypes.array
   };
   constructor() {
     super();
     this.state = {
-      maskShow: false
+      maskShow: false,
+      bags: []
     };
   }
   showMask() {
@@ -18,13 +20,8 @@ class GetPage extends Component {
       maskShow: true
     });
   }
-  hideMask() {
-    this.setState({
-      maskShow: false
-    });
-  }
+
   render() {
-    this;
     return (
       <div>
         <ul className={"information"}>
@@ -66,39 +63,15 @@ class GetPage extends Component {
             </div>
           </li>
         </ul>
-        <div className={this.state.maskShow ? "pop-floor show" : "pop-floor"}>
-          <div className={"mask"} onClick={this.hideMask.bind(this)} />
-          <div className={"get-bag"}>
-            <span className={"delete"} onClick={this.hideMask.bind(this)}>
-              x
-            </span>
-            <div>
-              <header className={"person-information"}>
-                <span className={"photo"} />
-                <p>喂！我闪走了啊</p>
-                <p>给你发一个红包</p>
-              </header>
-              <section className={"detail-information"}>
-                <ul>
-                  {this.props.bags.map(i => (
-                    <ListItem name={"2232"} val={i.i} />
-                  ))}
-                </ul>
-                <p className={"tips"}>
-                  该红包已超过24小时。如已领取，可在“我的红包”中查看
-                </p>
-              </section>
-            </div>
-          </div>
-        </div>
+        <RedBagPopFloor />
       </div>
     );
   }
 }
 const mapStateToProps = state => {
   return {
-    bags: state.bags
+    // bags: state.bags
   };
 };
-GetPage = connect(mapStateToProps)(GetPage);
-export default GetPage;
+MessageListBody = connect(mapStateToProps)(MessageListBody);
+export default MessageListBody;
