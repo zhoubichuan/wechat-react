@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import { Link } from "react-router-dom";
 import RedBagAmount from "./PopFloorBody/RedBagAmount";
 import RedBagNumber from "./PopFloorBody/RedBagNumber";
 import RedBagMessage from "./PopFloorBody/RedBagMessage";
@@ -8,27 +7,33 @@ class PopFloorBody extends Component {
   constructor() {
     super();
     this.state = {
-      inputErrorTips: ""
+      inputErrorTips: "",
+      amount: "",
+      number: "",
+      message: ""
     };
   }
   getRedBagAmount(amount) {
+    this.setState({ amount });
     if (amount > 20000) {
       this.setState({ inputErrorTips: "单次支付总额不可超过20000元" });
     }
   }
   getRedBagNumber(number) {
+    this.setState({ number });
     if (number > 100) {
       this.setState({ inputErrorTips: "一次最多发100个红包" });
     }
   }
   getRedBagMessage(message) {
-    console.log(message);
+    this.setState({ message });
   }
-  handleSubmit(e) {
-    const { money, redBagNum } = this.state;
-    this.props.onSubmit({ money, redBagNum });
+  handleSubmit = () => {
+    const { amount, number, message } = this.state;
+    this.props.sendSubmit({ amount, number, message });
+    this.props.sendPopFloorShowChild({ popFloorShow: false });
     // e.preventDefault();
-  }
+  };
   render() {
     return (
       <section className="main">
@@ -46,9 +51,9 @@ class PopFloorBody extends Component {
         </ul>
         <div className={"submit"}>
           <p>￥{Number(this.state.money) || "0"}.00</p>
-          <Link to="/get" onClick={this.handleSubmit.bind(this)}>
+          <a href="#" onClick={this.handleSubmit}>
             塞钱进红包
-          </Link>
+          </a>
         </div>
       </section>
     );

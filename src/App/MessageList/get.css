@@ -3,7 +3,14 @@
   height: 100vh;
 }
 .get .nav {
+  position: fixed;
+  width: 100%;
+  color: white;
+  background-color: black;
+
+  line-height: 30px;
   padding: 0 15px;
+  box-sizing: border-box;
 }
 .get .nav ul {
   display: flex;
@@ -12,6 +19,9 @@
 }
 .get .nav ul li {
   padding: 10px 0;
+}
+.get .nav ul li a {
+  color: wheat;
 }
 .information {
   width: calc(100% - 30px);
@@ -28,7 +38,6 @@
 .information li .photo {
   height: 30px;
   width: 30px;
-  background-color: blue;
   display: block;
 }
 .information li .content {

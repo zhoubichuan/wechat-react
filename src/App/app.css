@@ -1,8 +1,14 @@
+.stop-scroll {
+  max-height: 100vh;
+  overflow: hidden;
+}
 .app {
   height: 100vh;
   width: calc(100% - 30px);
   padding: 0 15px;
   background-color: rgb(245, 242, 237);
+  position: fixed;
+  z-index: 100;
 }
 .header {
   padding-top: 20px;

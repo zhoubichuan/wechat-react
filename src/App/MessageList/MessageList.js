@@ -1,31 +1,162 @@
 import React, { Component } from "react";
 import "./get.css";
-// import { Link } from "react-router-dom";
-import MessageListHeader from "./MessageListHeader";
-// import PopFloor from "./PopFloor";
-import MessageListBody from "./MessageListBody";
-import MessageListFooter from "./MessageListFooter";
+import PopFloor from "../PopFloor/PopFloor.js";
+import MessageListHeader from "./MessageListPart/MessageListHeader";
+import MessageListBody from "./MessageListPart/MessageListBody";
+import MessageListFooter from "./MessageListPart/MessageListFooter";
 
 class Get extends Component {
   constructor() {
     super();
     this.state = {
-      maskShow: false
+      popFloorShow: false,
+      messageData: [
+        {
+          pho: "http://www.cdhdky.com/images/ttt.jpg",
+          name: "唐僧",
+          message: "打雷了，下雨了，该收衣服了。",
+          redBag: { self: false }
+        },
+        {
+          pho: "http://www.cdhdky.com/images/ttt.jpg",
+          name: "孙悟空",
+          message: "嘿嘿我来了",
+          redBag: {
+            receiveRedBag: "",
+            self: false,
+            tips: "恭喜发财1",
+            total: "30",
+            sendTime: "1508614531210",
+            redBag: [
+              { name: "小明", money: "1", rest: "30" },
+              { name: "小k", money: "2", rest: "30" },
+              { name: "小红", money: "4", rest: "30" },
+              { name: "小红", money: "4", rest: "30" },
+              { name: "小红", money: "4", rest: "30" }
+            ]
+          }
+        },
+        {
+          pho: "http://www.cdhdky.com/images/ttt.jpg",
+          name: "猪八戒",
+          message: "嘿嘿我来了",
+          redBag: { self: false }
+        },
+        {
+          pho: "http://www.cdhdky.com/images/ttt.jpg",
+          name: "沙和尚",
+          message: "大师兄师傅父被妖怪抓走了",
+          redBag: {
+            receiveRedBag: "1",
+            self: false,
+            tips: "恭喜发财",
+            total: "30",
+            sendTime: "1538614531210",
+            redBag: [
+              { name: "小明", money: "1", rest: "30" },
+              { name: "小k", money: "2", rest: "30" },
+              { name: "小红", money: "4", rest: "30" },
+              { name: "小红", money: "4", rest: "30" },
+              { name: "小红", money: "4", rest: "30" }
+            ]
+          }
+        },
+        {
+          pho: "http://www.cdhdky.com/images/ttt.jpg",
+          name: "唐僧",
+          message: "打雷了，下雨了，该收衣服了。",
+          redBag: { self: false }
+        },
+        {
+          pho: "http://www.cdhdky.com/images/ttt.jpg",
+          name: "孙悟空",
+          message: "嘿嘿我来了",
+          redBag: {
+            receiveRedBag: "1",
+            self: false,
+            tips: "恭喜发财，大吉大利",
+            total: "30",
+            sendTime: "1538614531210",
+            redBag: [
+              { name: "小明", money: "1", rest: "30" },
+              { name: "小k", money: "2", rest: "30" },
+              { name: "小红", money: "4", rest: "30" },
+              { name: "小红", money: "4", rest: "30" },
+              { name: "小红", money: "4", rest: "30" }
+            ]
+          }
+        },
+        {
+          pho: "http://www.cdhdky.com/images/ttt.jpg",
+          name: "猪八戒",
+          message: "嘿嘿我来了",
+          redBag: { self: false }
+        },
+        {
+          pho: "http://www.cdhdky.com/images/ttt.jpg",
+          name: "沙和尚",
+          message: "大师兄师傅父被妖怪抓走了",
+          redBag: {
+            receiveRedBag: "2",
+            self: false,
+            tips: "大吉大利",
+            total: "30",
+            sendTime: "1538614531210",
+            redBag: [
+              { name: "小明", money: "1", rest: "30" },
+              { name: "小k", money: "2", rest: "30" },
+              { name: "小红", money: "4", rest: "30" },
+              { name: "小红", money: "4", rest: "30" },
+              { name: "小红", money: "4", rest: "30" }
+            ]
+          }
+        }
+      ]
     };
   }
-  ChildrenFunc(data) {
-    this.setState({ maskShow: this.state.maskShow });
+  getPopFloorShow(val) {
+    this.setState(val);
+  }
+  getSubmitData(val) {
+    let message = {
+      pho: "http://www.cdhdky.com/images/ttt.jpg",
+      name: "我自己",
+      message: "大师兄师傅父被妖怪抓走了",
+      redBag: {
+        receiveRedBag: "2",
+        self: true,
+        tips: "大吉大利",
+        total: "30",
+        sendTime: "1538614531210",
+        redBag: [
+          { name: "小明", money: "1", rest: "30" },
+          { name: "小k", money: "2", rest: "30" },
+          { name: "小红", money: "4", rest: "30" },
+          { name: "小红", money: "4", rest: "30" },
+          { name: "小红", money: "4", rest: "30" }
+        ]
+      }
+    };
+    let old = this.state.messageData;
+    old.push(message);
+    this.setState({
+      messageData: old
+    });
   }
   render() {
-    var maskShow = this.state.maskShow;
     return (
-      <div className={"get"}>
+      <div className={this.state.popFloorShow ? "get stop-scroll" : "get"}>
+        {this.state.popFloorShow && (
+          <PopFloor
+            sendPopFloorShow={val => this.getPopFloorShow(val)}
+            sendSubmitData={val => this.getSubmitData(val)}
+          />
+        )}
         <MessageListHeader />
-        <MessageListBody
-          maskShow={maskShow}
-          onUpdata={maskShow => this.ChildrenFunc(maskShow)}
+        <MessageListBody messageData={this.state.messageData} />
+        <MessageListFooter
+          sendPopFloorShow={val => this.getPopFloorShow(val)}
         />
-        <MessageListFooter />
       </div>
     );
   }

@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 
-class ListItem extends Component {
+class RedBagReceive extends Component {
   render() {
     return (
       <li>
@@ -11,4 +11,4 @@ class ListItem extends Component {
     );
   }
 }
-export default ListItem;
+export default RedBagReceive;
