@@ -12,15 +12,10 @@ class MessageListBody extends Component {
   constructor() {
     super();
     this.state = {
-      maskShow: false,
       showRedBagPop: false
     };
   }
-  showMask() {
-    this.setState({
-      maskShow: true
-    });
-  }
+
   getShowRedBagPop(val) {
     this.setState(val);
   }
