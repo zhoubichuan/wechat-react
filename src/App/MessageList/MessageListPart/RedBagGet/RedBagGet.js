@@ -6,6 +6,7 @@ class RedBagGet extends Component {
 
   handleClick = () => {
     this.props.sendShowRedBagPop({ showRedBagPop: true });
+    this.props.sendScrollStopChild({ scrollStop: true });
   };
   render() {
     return (

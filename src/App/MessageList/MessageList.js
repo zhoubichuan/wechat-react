@@ -10,6 +10,7 @@ class Get extends Component {
     super();
     this.state = {
       popFloorShow: false,
+      scrollStop: false,
       messageData: [
         {
           pho: "http://www.cdhdky.com/images/ttt.jpg",
@@ -143,9 +144,12 @@ class Get extends Component {
       messageData: old
     });
   }
+  getScrollStop(val) {
+    this.setState(val);
+  }
   render() {
     return (
-      <div className={this.state.popFloorShow ? "get stop-scroll" : "get"}>
+      <div className={this.state.scrollStop ? "get stop-scroll" : "get"}>
         {this.state.popFloorShow && (
           <PopFloor
             sendPopFloorShow={val => this.getPopFloorShow(val)}
@@ -153,7 +157,10 @@ class Get extends Component {
           />
         )}
         <MessageListHeader />
-        <MessageListBody messageData={this.state.messageData} />
+        <MessageListBody
+          messageData={this.state.messageData}
+          sendScrollStop={val => this.getScrollStop(val)}
+        />
         <MessageListFooter
           sendPopFloorShow={val => this.getPopFloorShow(val)}
         />

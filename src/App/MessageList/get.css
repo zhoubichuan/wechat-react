@@ -92,6 +92,7 @@
   opacity: 0.8;
   position: absolute;
   top: 0;
+  z-index: 1000;
 }
 .pop-floor .get-bag {
   width: 80%;
@@ -102,6 +103,7 @@
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
+  z-index: 10000;
 }
 .pop-floor .get-bag .delete {
   margin-left: 10px;

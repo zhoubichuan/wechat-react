@@ -27,8 +27,10 @@ class MessageListBody extends Component {
   getShowRedBagPopFloor(val) {
     this.setState(val);
   }
+  getScrollStopChild(val) {
+    this.props.sendScrollStop(val);
+  }
   render() {
-    debugger;
     return (
       <div>
         <ul className={"information"} onClick={this.handleClick}>
@@ -42,6 +44,7 @@ class MessageListBody extends Component {
                   <RedBagGet
                     sendShowRedBagPop={val => this.getShowRedBagPop(val)}
                     {...val.redBag}
+                    sendScrollStopChild={val => this.getScrollStopChild(val)}
                   />
                 )}
               </div>
