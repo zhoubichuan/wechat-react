@@ -6,20 +6,20 @@ class Footer extends Component {
   constructor() {
     super();
   }
-
   render() {
     return (
-      <div>
+      <div className="app-footer" component={"footer-component"}>
         <ul>
           <li>
             <Link to="/message">信息</Link>
           </li>
           <li>
-            <Link to="/find">发现</Link>
-          </li>
-          <li>
             <Link to="/address">通讯录</Link>
           </li>
+          <li>
+            <Link to="/find">发现</Link>
+          </li>
+
           <li>
             <Link to="/me">我</Link>
           </li>

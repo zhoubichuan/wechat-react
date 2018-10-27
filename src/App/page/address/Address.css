@@ -1,0 +1,37 @@
+.address {
+}
+.address .top {
+}
+.address .top ul {
+}
+.address .top ul li {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 5px 10px;
+}
+.address .top ul li img {
+  width: 40px;
+  height: 40px;
+}
+.address .top ul li p {
+  margin-left: 10px;
+}
+
+.address .link-people {
+}
+.address .link-people ul {
+}
+.address .link-people ul li {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 5px 10px;
+}
+.address .link-people ul li img {
+  width: 40px;
+  height: 40px;
+}
+.address .link-people ul li p {
+  margin-left: 10px;
+}

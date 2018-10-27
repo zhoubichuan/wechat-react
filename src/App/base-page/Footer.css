@@ -1,4 +1,4 @@
-ul {
+.app-footer ul {
   position: fixed;
   bottom: 0;
   display: flex;
@@ -7,7 +7,7 @@ ul {
   align-items: center;
   width: 100%;
 }
-ul li {
+.app-footer ul li {
   width: 25%;
   text-align: center;
   background-color: lightcyan;

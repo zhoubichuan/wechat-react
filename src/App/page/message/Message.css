@@ -1,0 +1,28 @@
+.message {
+}
+.message .top {
+}
+.message .content {
+  padding: 0 10px;
+  margin-left: 0;
+}
+.message .content ul {
+}
+.message .content ul li {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  height: 40px;
+  padding: 5px 0;
+}
+.message .content ul li .left {
+}
+.message .content ul li .left img {
+  width: 40px;
+}
+.message .content ul li .left div {
+  float: right;
+  margin-left: 20px;
+}
+.message .content ul li .right {
+}

@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import "./get.css";
 import PopFloor from "../PopFloor/PopFloor.js";
-import MessageListHeader from "./MessageListPart/MessageListHeader";
 import MessageListBody from "./MessageListPart/MessageListBody";
 import MessageListFooter from "./MessageListPart/MessageListFooter";
 
@@ -156,7 +155,6 @@ class Get extends Component {
             sendSubmitData={val => this.getSubmitData(val)}
           />
         )}
-        <MessageListHeader />
         <MessageListBody
           messageData={this.state.messageData}
           sendScrollStop={val => this.getScrollStop(val)}

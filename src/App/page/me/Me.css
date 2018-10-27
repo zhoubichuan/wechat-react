@@ -1,0 +1,19 @@
+.me {
+}
+.me {
+}
+.me ul {
+}
+.me ul li {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 5px 10px;
+}
+.me ul li img {
+  width: 40px;
+  height: 40px;
+}
+.me ul li p {
+  margin-left: 10px;
+}
