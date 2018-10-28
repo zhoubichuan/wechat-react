@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import MessageList from "./MessageList/MessageList";
+import Header from "../../base-page/Header";
 import "./Message.css";
 
 class Message extends Component {
@@ -78,31 +79,38 @@ class Message extends Component {
   };
   render() {
     return (
-      <div className={"message"}>
-        {!this.state.messageShow && (
-          <div>
-            <div className={"top"}>
-              <input />
-            </div>
-            <div className={"content"}>
-              <ul>
-                {this.state.message.map((item, index) => (
-                  <li key={index} onClick={this.handleClick}>
-                    <div className={"left"}>
-                      <img src={item.ico} alt="" />
-                      <div>
-                        <p>{item.title}</p>
-                        <p>{item.tips}</p>
+      <div>
+        <Header>
+          <li />
+          <li>微信</li>
+          <li>更多</li>
+        </Header>
+        <div className={"message"}>
+          {!this.state.messageShow && (
+            <div>
+              <div className={"top"}>
+                <input />
+              </div>
+              <div className={"content"}>
+                <ul>
+                  {this.state.message.map((item, index) => (
+                    <li key={index} onClick={this.handleClick}>
+                      <div className={"left"}>
+                        <img src={item.ico} alt="" />
+                        <div>
+                          <p>{item.title}</p>
+                          <p>{item.tips}</p>
+                        </div>
                       </div>
-                    </div>
-                    <div className={"right"}>{item.time}</div>
-                  </li>
-                ))}
-              </ul>
+                      <div className={"right"}>{item.time}</div>
+                    </li>
+                  ))}
+                </ul>
+              </div>
             </div>
-          </div>
-        )}
-        {this.state.messageShow && <MessageList />}
+          )}
+          {this.state.messageShow && <MessageList />}
+        </div>
       </div>
     );
   }

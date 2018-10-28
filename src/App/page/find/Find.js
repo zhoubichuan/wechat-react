@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import Header from "../../base-page/Header";
 import "./Find.css";
 
 class Find extends Component {
@@ -20,16 +21,23 @@ class Find extends Component {
   }
   render() {
     return (
-      <div className={"find"} component={"find-component"}>
-        <div className={"top"}>
-          <ul>
-            {this.state.application.map((item, index) => (
-              <li key={index}>
-                <img src={item.ico} alt="" />
-                <p>{item.title}</p>
-              </li>
-            ))}
-          </ul>
+      <div>
+        <Header>
+          <li />
+          <li>发现</li>
+          <li />
+        </Header>
+        <div className={"find"} component={"find-component"}>
+          <div className={"top"}>
+            <ul>
+              {this.state.application.map((item, index) => (
+                <li key={index}>
+                  <img src={item.ico} alt="" />
+                  <p>{item.title}</p>
+                </li>
+              ))}
+            </ul>
+          </div>
         </div>
       </div>
     );

@@ -12,9 +12,16 @@
   flex-direction: row;
   justify-content: space-between;
 }
+
 .app-header ul li {
   padding: 10px 0;
 }
 .app-header ul li a {
   color: wheat;
+}
+.app-header ul li.back {
+}
+.app-header ul li.title {
+}
+.app-header ul li.other {
 }

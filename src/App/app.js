@@ -5,7 +5,6 @@ import Message from "./page/message/Message.js";
 import Address from "./page/address/Address.js";
 import Find from "./page/find/Find.js";
 import Me from "./page/me/Me.js";
-import Header from "./base-page/Header.js";
 import Footer from "./base-page/Footer.js";
 import { Provider } from "react-redux";
 import store from "./store";
@@ -16,7 +15,6 @@ class App extends Component {
       <Provider store={store}>
         <Router>
           <div>
-            <Header />
             <Switch>
               <Route exact path="/" component={Message} />
               <Route path="/message" component={Message} />

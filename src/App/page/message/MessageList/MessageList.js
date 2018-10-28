@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import "./get.css";
+import "./MessageList.css";
 import PopFloor from "../PopFloor/PopFloor.js";
 import MessageListBody from "./MessageListPart/MessageListBody";
 import MessageListFooter from "./MessageListPart/MessageListFooter";

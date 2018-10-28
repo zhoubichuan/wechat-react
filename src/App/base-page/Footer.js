@@ -19,7 +19,6 @@ class Footer extends Component {
           <li>
             <Link to="/find">发现</Link>
           </li>
-
           <li>
             <Link to="/me">我</Link>
           </li>

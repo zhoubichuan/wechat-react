@@ -1,4 +1,8 @@
-const SET_ARGU = "SET_ARGU";
+import * as Types from "../action-type";
+
+let initState = {
+  showMessageRecordApplication: false
+};
 function setBags(money, redBagNum) {
   var bags = [];
   var avg = +money / +redBagNum;
@@ -7,9 +11,14 @@ function setBags(money, redBagNum) {
   }
   return bags;
 }
-function reducer(state, action) {
+function reducer(state = initState, action) {
   switch (action.type) {
-    case SET_ARGU:
+    case Types.SHOW_MESSAGE_RECORD_APPLICATION:
+      return {
+        ...state,
+        showMessageRecordApplication: action.isShow
+      };
+    case Types.SET_ARGU:
       var bags = setBags(action.money, action.redBagNum);
       return {
         ...state,

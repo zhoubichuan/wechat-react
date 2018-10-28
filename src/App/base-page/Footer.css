@@ -6,10 +6,23 @@
   justify-content: space - between;
   align-items: center;
   width: 100%;
+  padding-top: 5px;
+  background-color: lightcyan;
 }
 .app-footer ul li {
   width: 25%;
   text-align: center;
-  background-color: lightcyan;
+
   height: 40px;
+}
+.app-footer ul li a {
+  display: block;
+}
+.app-footer ul li::before {
+  margin: 0 auto;
+  content: "";
+  width: 20px;
+  height: 20px;
+  background-color: blue;
+  display: block;
 }

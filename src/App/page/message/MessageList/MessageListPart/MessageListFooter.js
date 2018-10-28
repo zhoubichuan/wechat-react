@@ -1,10 +1,11 @@
 import React, { Component } from "react";
+import * as actions from "../../../../store/action";
+import { connect } from "net";
 
 class MessageListFooter extends Component {
   constructor() {
     super();
     this.state = {
-      applicationShow: false,
       applications: [
         {
           title: "照片",
@@ -75,4 +76,8 @@ class MessageListFooter extends Component {
     );
   }
 }
+// export default connect(
+//   state => ({ ...state.showMessageRecordApplication }),
+//   actions
+// )(MessageListFooter);
 export default MessageListFooter;

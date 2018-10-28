@@ -10,11 +10,7 @@ class Header extends Component {
     return (
       <div className={"app-header"} component={"header-component"}>
         <ul>
-          <li>
-            {"<"}微信{"(1)"}
-          </li>
-          <li>前端小宝宝们</li>
-          <li>···</li>
+          {React.Children.map(this.props.children, (item, index) => item)}
         </ul>
       </div>
     );
