@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 import "./MessageList.css";
-import PopFloor from "../PopFloor/PopFloor.js";
+import PopFloor from "./PopFloor/PopFloor.js";
 import MessageListBody from "./MessageListPart/MessageListBody";
-import MessageListFooter from "./MessageListPart/MessageListFooter";
+import Application from "./MessageListPart/Application";
 
 class Get extends Component {
   constructor() {
@@ -159,7 +159,7 @@ class Get extends Component {
           messageData={this.state.messageData}
           sendScrollStop={val => this.getScrollStop(val)}
         />
-        <MessageListFooter
+        <Application
           sendPopFloorShow={val => this.getPopFloorShow(val)}
         />
       </div>

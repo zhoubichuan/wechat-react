@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import Header from "../../base-page/Header";
+import Footer from "../../base-page/Footer";
 import "./Address.css";
 
 class Find extends Component {
@@ -66,6 +67,7 @@ class Find extends Component {
             </ul>
           </div>
         </div>
+        <Footer />
       </div>
     );
   }

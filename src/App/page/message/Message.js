@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import MessageList from "./MessageList/MessageList";
 import Header from "../../base-page/Header";
+import Footer from "../../base-page/Footer";
 import "./Message.css";
 
 class Message extends Component {
@@ -111,6 +112,7 @@ class Message extends Component {
           )}
           {this.state.messageShow && <MessageList />}
         </div>
+        {!this.state.messageShow && <Footer />}
       </div>
     );
   }

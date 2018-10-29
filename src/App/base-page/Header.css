@@ -1,4 +1,7 @@
 .app-header {
+  height: 50px;
+}
+.app-header ul {
   position: fixed;
   width: 100%;
   color: white;
@@ -6,8 +9,6 @@
   line-height: 30px;
   padding: 0 15px;
   box-sizing: border-box;
-}
-.app-header ul {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
