@@ -1,6 +1,31 @@
 .me {
+  background-color: gray;
 }
-.me {
+.me .information {
+  background-color: white;
+}
+.me .information a {
+}
+.me .information a {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 0;
+}
+.me .information a .left {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.me .information a .left img {
+  width: 40px;
+  height: 40px;
+}
+.me .information a .left div {
+  margin-left: 20px;
+}
+.me .information a .rigth {
 }
 .me ul {
 }

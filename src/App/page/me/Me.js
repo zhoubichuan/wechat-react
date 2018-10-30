@@ -49,6 +49,7 @@ class Me extends Component {
       mouldShow: true
     });
   };
+
   render() {
     return (
       <div>
@@ -63,7 +64,7 @@ class Me extends Component {
               <div className={"information"} onClick={this.handleClick}>
                 <Link to={"/Me/PersonInformation"}>
                   <div className={"left"}>
-                    <img src="" alt="" />
+                    <img src="http://www.cdhdky.com/images/ttt.jpg" alt="" />
                     <div>
                       <p>会跑的鸡腿</p>
                       <p>微信号：zbc159x</p>

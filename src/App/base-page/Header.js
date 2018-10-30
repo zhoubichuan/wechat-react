@@ -5,11 +5,11 @@ class Header extends Component {
   constructor() {
     super();
   }
-  
+
   render() {
     return (
       <div className={"app-header"} component={"header-component"}>
-        <ul go={this.goBack}>
+        <ul>
           {React.Children.map(this.props.children, (item, index) => item)}
         </ul>
       </div>
