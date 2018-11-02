@@ -1,11 +1,15 @@
 .me {
-  background-color: gray;
+  background-color: #eeeeec;
+  padding-top: 7px;
+  height: calc(100vh - 100px);
+  overflow-y: auto;
 }
 .me .information {
-  background-color: white;
+  background-color: #ffffff;
+  padding: 5px 15px;
+  box-sizing: border-box;
 }
-.me .information a {
-}
+
 .me .information a {
   display: flex;
   flex-direction: row;
@@ -28,16 +32,32 @@
 .me .information a .rigth {
 }
 .me ul {
+  margin-top: 15px;
+}
+.me ul li:first-child {
+  border: none;
+  margin-bottom: 15px;
 }
 .me ul li {
+  padding: 5px 15px;
+  background-color: #ffffff;
+  border-bottom: 1px solid #d2d3d2;
+}
+.me ul li:nth-last-child(2) {
+  border: none;
+}
+.me ul li:last-child {
+  border: none;
+  margin-top: 15px;
+}
+.me ul li a {
   display: flex;
   flex-direction: row;
   align-items: center;
-  padding: 5px 10px;
 }
 .me ul li img {
-  width: 40px;
-  height: 40px;
+  width: 20px;
+  height: 20px;
 }
 .me ul li p {
   margin-left: 10px;

@@ -66,7 +66,7 @@ class Me extends Component {
                   <div className={"left"}>
                     <img src="http://www.cdhdky.com/images/ttt.jpg" alt="" />
                     <div>
-                      <p>会跑的鸡腿</p>
+                      <h3>会跑的鸡腿</h3>
                       <p>微信号：zbc159x</p>
                     </div>
                   </div>

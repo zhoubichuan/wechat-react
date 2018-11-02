@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import MessageList from "./MessageList/MessageList";
 import Header from "../../base-page/Header";
+import { Link } from "react-router-dom";
 import Footer from "../../base-page/Footer";
 import "./Message.css";
 
@@ -68,7 +69,8 @@ class Message extends Component {
           ico: "http://www.cdhdky.com/images/ttt.jpg",
           title: "讨论区",
           tips: "王锦辉",
-          time: "下午5:44"
+          time: "下午5:44",
+          route: ""
         }
       ]
     };
@@ -90,20 +92,22 @@ class Message extends Component {
           {!this.state.messageShow && (
             <div>
               <div className={"top"}>
-                <input />
+                <input placeholder={"搜索"} />
               </div>
               <div className={"content"}>
                 <ul>
                   {this.state.message.map((item, index) => (
-                    <li key={index} onClick={this.handleClick}>
-                      <div className={"left"}>
-                        <img src={item.ico} alt="" />
-                        <div>
-                          <p>{item.title}</p>
-                          <p>{item.tips}</p>
+                    <li key={index}>
+                      <Link to={"/Message/" + item.route}>
+                        <div className={"left"}>
+                          <img src={item.ico} alt="" />
+                          <div>
+                            <p>{item.title}</p>
+                            <p>{item.tips}</p>
+                          </div>
                         </div>
-                      </div>
-                      <div className={"right"}>{item.time}</div>
+                        <div className={"right"}>{item.time}</div>
+                      </Link>
                     </li>
                   ))}
                 </ul>
