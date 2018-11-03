@@ -1,6 +1,5 @@
-﻿# react 微信红包应用
+﻿# 微信 app
 
-## react+react-router+react-redux
+## 技术：react+react-router+react-redux + less
 
-- 启动：npm start
-
+* 启动：npm start

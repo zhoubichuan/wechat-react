@@ -1,8 +1,10 @@
 import React, { Component } from "react";
 import MessageList from "./MessageList/MessageList";
 import Header from "../../base-page/Header";
+import Search from "../../base-page/Search";
 import { Link } from "react-router-dom";
 import Footer from "../../base-page/Footer";
+
 import "./Message.css";
 
 class Message extends Component {
@@ -91,9 +93,7 @@ class Message extends Component {
         <div className={"message"}>
           {!this.state.messageShow && (
             <div>
-              <div className={"top"}>
-                <input placeholder={"搜索"} />
-              </div>
+              <Search />
               <div className={"content"}>
                 <ul>
                   {this.state.message.map((item, index) => (

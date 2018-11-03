@@ -6,11 +6,14 @@ class PersonInformation extends Component {
   constructor() {
     super();
   }
+  handleClick = () => {
+    window.history.go(0);
+  };
   render() {
     return (
       <div component={"me-personinformation-component"}>
         <Header>
-          <li>我</li>
+          <li onClick={this.handleClick}>我</li>
           <li>个人信息</li>
           <li />
         </Header>

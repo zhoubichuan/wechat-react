@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import Header from "../../base-page/Header";
+import Search from "../../base-page/Search";
 import Footer from "../../base-page/Footer";
 import "./Address.css";
 
@@ -46,6 +47,7 @@ class Find extends Component {
           <li>其他</li>
         </Header>
         <div className={"address"} component={"address-component"}>
+          <Search />
           <div className={"top"}>
             <ul>
               {this.state.application.map((item, index) => (
