@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import Header from "../../../../base-page/Header";
+import Message from "../Base/Message";
 
 class Album extends Component {
   constructor() {
@@ -9,11 +10,11 @@ class Album extends Component {
     return (
       <div component={"me-album-component"}>
         <Header>
-          <li onClick={console.log(this.porps)}>我</li>
-          <li />
+          <li onClick={console.log(this.porps)}>微信（6）</li>
+          <li>讨论区 前端进阶（397）</li>
           <li>...</li>
         </Header>
-        <div>相册</div>
+        <Message />
       </div>
     );
   }

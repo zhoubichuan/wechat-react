@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import "./pop.css";
 class ReadBagPopFloor extends Component {
   constructor() {
     super();
@@ -15,11 +16,11 @@ class ReadBagPopFloor extends Component {
             x
           </span>
           <div>
-            <header className={"person-information"}>
+            <div className={"top"}>
               <span className={"photo"} />
               <p>喂！我闪走了啊</p>
               <p>给你发一个红包</p>
-            </header>
+            </div>
             <section className={"detail-information"}>
               <ul>
                 {/* {this.props.bags.map(i => (

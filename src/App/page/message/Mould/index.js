@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { HashRouter as Router, Route, Switch } from "react-router-dom";
-import Friend from "./Friend";
+import Qun from "./Qun";
 import Scan from "./Scan";
 import Shake from "./Shake";
 import See from "./See";
@@ -9,6 +9,7 @@ import Nearby from "./Nearby";
 import Buy from "./Buy";
 import Game from "./Game";
 import SmallApp from "./SmallApp";
+import Application from "./Base/Application";
 
 class Mould extends Component {
   constructor() {
@@ -16,9 +17,9 @@ class Mould extends Component {
   }
   render() {
     return (
-      <div component={"me-mould-component"}>
+      <div component={"message-mould-component"}>
         <Switch>
-          <Route path="/Message/Friend" component={Friend} />
+          <Route path="/Message/Qun" component={Qun} />
           <Route path="/Message/Scan" component={Scan} />
           <Route path="/Message/Shake" component={Shake} />
           <Route path="/Message/See" component={See} />
@@ -28,6 +29,7 @@ class Mould extends Component {
           <Route path="/Message/Game" component={Game} />
           <Route path="/Message/SmallApp" component={SmallApp} />
         </Switch>
+        <Application sendPopFloorShow={val => this.getPopFloorShow(val)} />
       </div>
     );
   }

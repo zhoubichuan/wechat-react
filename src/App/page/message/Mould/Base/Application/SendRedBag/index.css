@@ -1,0 +1,108 @@
+.send-red-bag {
+  height: 100vh;
+  width: calc(100% - 30px);
+  padding: 0 15px;
+  background-color: rgb(245, 242, 237);
+  position: fixed;
+  z-index: 100;
+  top: 0;
+}
+.send-red-bag .header {
+  padding-top: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  height: 40px;
+}
+.send-red-bag .header .cancel {
+}
+.send-red-bag .header .title {
+  font-size: 18px;
+}
+.send-red-bag .header .more {
+}
+.send-red-bag .main {
+  height: calc(100vh - 90px);
+}
+.send-red-bag .main .message {
+  height: auto;
+}
+.send-red-bag .main .message .money {
+  background-color: rgb(245, 242, 237);
+}
+.send-red-bag .main .message .money .sum {
+  height: 40px;
+  line-height: 40px;
+  background-color: white;
+  border-radius: 5px;
+}
+.send-red-bag .main .message .money .sum i {
+  width: 20px;
+  height: 20px;
+  background-color: #c7c768;
+  color: white;
+}
+.send-red-bag .main .message .money .sum input {
+  border: none;
+  width: calc(100% - 70px);
+  text-align: right;
+}
+.send-red-bag .main .message .money .tips {
+  margin-top: 5px;
+}
+.send-red-bag .main .message .money .tips a {
+  color: blue;
+}
+.send-red-bag .main .message .people {
+  margin-top: 20px;
+}
+.send-red-bag .main .message .people .sum {
+  height: 40px;
+  line-height: 40px;
+  background-color: white;
+  border-radius: 5px;
+}
+.send-red-bag .main .message .people .sum input {
+  border: none;
+  width: calc(100% - 70px);
+  text-align: right;
+}
+.send-red-bag .main .message li.tips {
+  height: 40px;
+  background-color: white;
+  border-radius: 5px;
+  margin-top: 20px;
+}
+.send-red-bag .main .message li.tips input {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+.send-red-bag .main .submit {
+  height: 60px;
+}
+.send-red-bag .main .submit p {
+  text-align: center;
+  font-size: 24px;
+  font-weight: bold;
+  margin-top: 20px;
+}
+.send-red-bag .main .submit a {
+  text-align: center;
+  display: block;
+  margin: 0 auto;
+  margin-top: 20px;
+  height: 40px;
+  line-height: 40px;
+  border-radius: 5px;
+  width: 200px;
+  background-color: red;
+  color: white;
+}
+
+.send-red-bag .footer {
+  height: 30px;
+  text-align: center;
+  color: gray;
+}

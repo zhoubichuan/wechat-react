@@ -1,9 +1,9 @@
 import React, { Component } from "react";
-import RedBagAmount from "./PopFloorBody/RedBagAmount";
-import RedBagNumber from "./PopFloorBody/RedBagNumber";
-import RedBagMessage from "./PopFloorBody/RedBagMessage";
+import RedBagAmount from "./SendRedBagBody/SendRedBagAmount";
+import RedBagNumber from "./SendRedBagBody/SendRedBagNumber";
+import RedBagMessage from "./SendRedBagBody/SendRedBagMessage";
 
-class PopFloorBody extends Component {
+class SendRedBagBody extends Component {
   constructor() {
     super();
     this.state = {
@@ -31,7 +31,7 @@ class PopFloorBody extends Component {
   handleSubmit = () => {
     const { amount, number, message } = this.state;
     this.props.sendSubmit({ amount, number, message });
-    this.props.sendPopFloorShowChild({ popFloorShow: false });
+    this.props.sendSendRedBagShowChild({ SendRedBagShow: false });
     // e.preventDefault();
   };
   render() {
@@ -59,4 +59,4 @@ class PopFloorBody extends Component {
     );
   }
 }
-export default PopFloorBody;
+export default SendRedBagBody;

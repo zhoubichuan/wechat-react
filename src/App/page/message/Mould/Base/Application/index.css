@@ -1,11 +1,11 @@
-.message-footer {
+.message-application {
   position: fixed;
   width: 100%;
   background-color: #e9e9e9;
   bottom: 0;
   z-index: 100;
 }
-.message-footer .send {
+.message-application .send {
   width: 100%;
   display: flex;
   flex-direction: row;
@@ -15,42 +15,42 @@
   box-sizing: border-box;
   border-bottom: 1px solid gainsboro;
 }
-.message-footer .send .voiceInformation {
+.message-application .send .voiceInformation {
   width: 24px;
   height: 24px;
   background: url(./ico.png) -7px -8px;
 }
-.message-footer .send input {
+.message-application .send input {
   width: calc(100% - 102px);
   margin-left: 10px;
   height: 20px;
   border: 1px solid #f1f1f1;
   border-radius: 5px;
 }
-.message-footer .send .emjoy {
+.message-application .send .emjoy {
   width: 24px;
   height: 24px;
   background: url(./ico.png) -263px -8px;
   margin-left: 10px;
 }
 
-.message-footer .send .moreBtn {
+.message-application .send .moreBtn {
   width: 24px;
   height: 24px;
   background: url(./ico.png) -290px -8px;
   margin-left: 10px;
 }
-.message-footer .function {
+.message-application .function {
 }
-.message-footer .function ul {
+.message-application .function ul {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
 }
-.message-footer .function ul li {
+.message-application .function ul li {
   width: 25%;
 }
-.message-footer .function ul li i {
+.message-application .function ul li i {
   width: 50px;
   height: 50px;
   margin: 0 auto;
@@ -58,32 +58,32 @@
   margin-top: 10px;
   background: url(./ico.png) -32px -53px;
 }
-.message-footer .function ul li i.ico1 {
+.message-application .function ul li i.ico1 {
   background-position-x: -27px;
 }
-.message-footer .function ul li i.ico2 {
+.message-application .function ul li i.ico2 {
   background-position-x: -98px;
 }
-.message-footer .function ul li i.ico3 {
+.message-application .function ul li i.ico3 {
   background-position-x: -173px;
 }
-.message-footer .function ul li i.ico4 {
+.message-application .function ul li i.ico4 {
   background-position-x: -244px;
 }
-.message-footer .function ul li i.ico5 {
+.message-application .function ul li i.ico5 {
   background-position: -27px -131px;
 }
-.message-footer .function ul li i.ico6 {
+.message-application .function ul li i.ico6 {
   background-position: -98px -131px;
 }
-.message-footer .function ul li i.ico7 {
+.message-application .function ul li i.ico7 {
   background-position: -173px -131px;
 }
-.message-footer .function ul li i.ico8 {
+.message-application .function ul li i.ico8 {
   background-position: -244px -131px;
 }
 
-.message-footer .function ul li span {
+.message-application .function ul li span {
   display: block;
   text-align: center;
   padding-top: 10px;

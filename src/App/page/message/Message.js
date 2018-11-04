@@ -1,9 +1,10 @@
 import React, { Component } from "react";
-import MessageList from "./MessageList/MessageList";
 import Header from "../../base-page/Header";
 import Search from "../../base-page/Search";
 import { Link } from "react-router-dom";
+import Mould from "./Mould";
 import Footer from "../../base-page/Footer";
+
 
 import "./Message.css";
 
@@ -11,61 +12,70 @@ class Message extends Component {
   constructor() {
     super();
     this.state = {
-      messageShow: false,
+      mouldShow: false,
       message: [
         {
           ico: "http://www.cdhdky.com/images/ttt.jpg",
-          title: "讨论区",
+          title: "讨论区 前端进阶",
           tips: "王锦辉",
-          time: "下午5:44"
+          time: "下午5:44",
+          route: "Qun"
         },
         {
           ico: "http://www.cdhdky.com/images/ttt.jpg",
-          title: "讨论区",
-          tips: "王锦辉",
-          time: "下午5:44"
+          title: "订阅好消息",
+          tips: "1条",
+          time: "下午5:44",
+          route: "dingyue"
         },
         {
           ico: "http://www.cdhdky.com/images/ttt.jpg",
-          title: "讨论区",
+          title: "华为官网Team",
           tips: "王锦辉",
-          time: "下午5:44"
+          time: "下午5:44",
+          route: "Qun"
         },
         {
           ico: "http://www.cdhdky.com/images/ttt.jpg",
-          title: "讨论区",
+          title: "服务通知",
           tips: "王锦辉",
-          time: "下午5:44"
+          time: "下午5:44",
+          route: "server"
         },
         {
           ico: "http://www.cdhdky.com/images/ttt.jpg",
-          title: "讨论区",
+          title: "事业二部~销售&CBG ",
           tips: "王锦辉",
-          time: "下午5:44"
+          time: "下午5:44",
+          route: "Qun"
         },
         {
           ico: "http://www.cdhdky.com/images/ttt.jpg",
-          title: "讨论区",
+          title: "文件传输助手",
           tips: "王锦辉",
-          time: "下午5:44"
+          time: "下午5:44",
+          route: "healp"
         },
         {
           ico: "http://www.cdhdky.com/images/ttt.jpg",
-          title: "讨论区",
+          title: "招商银行深圳分行",
           tips: "王锦辉",
-          time: "下午5:44"
+          time: "下午5:44",
+          route: "yinhang"
         },
         {
           ico: "http://www.cdhdky.com/images/ttt.jpg",
-          title: "讨论区",
+          title: "微信运动",
           tips: "王锦辉",
-          time: "下午5:44"
+          time: "下午5:44",
+          route: "yundong"
         },
         {
           ico: "http://www.cdhdky.com/images/ttt.jpg",
-          title: "讨论区",
+          title: "群",
           tips: "王锦辉",
-          time: "下午5:44"
+          time: "下午5:44",
+          route: "Qun"
         },
         {
           ico: "http://www.cdhdky.com/images/ttt.jpg",
@@ -79,44 +89,46 @@ class Message extends Component {
   }
   handleClick = () => {
     this.setState({
-      messageShow: true
+      mouldShow: false
     });
+  };
+  handleClick = () => {
+    this.setState({ mouldShow: true });
   };
   render() {
     return (
       <div>
-        <Header>
-          <li />
-          <li>微信</li>
-          <li>更多</li>
-        </Header>
-        <div className={"message"}>
-          {!this.state.messageShow && (
-            <div>
-              <Search />
-              <div className={"content"}>
-                <ul>
-                  {this.state.message.map((item, index) => (
-                    <li key={index}>
-                      <Link to={"/Message/" + item.route}>
-                        <div className={"left"}>
-                          <img src={item.ico} alt="" />
-                          <div>
-                            <p>{item.title}</p>
-                            <p>{item.tips}</p>
-                          </div>
+        {!this.state.mouldShow && (
+          <div className={"message"}>
+            <Header>
+              <li />
+              <li>微信</li>
+              <li>更多</li>
+            </Header>
+            <Search />
+            <div className={"content"}>
+              <ul>
+                {this.state.message.map((item, index) => (
+                  <li key={index} onClick={this.handleClick}>
+                    <Link to={"/Message/" + item.route}>
+                      <div className={"left"}>
+                        <img src={item.ico} alt="" />
+                        <div>
+                          <p>{item.title}</p>
+                          <p>{item.tips}</p>
                         </div>
-                        <div className={"right"}>{item.time}</div>
-                      </Link>
-                    </li>
-                  ))}
-                </ul>
-              </div>
+                      </div>
+                      <div className={"right"}>{item.time}</div>
+                    </Link>
+                  </li>
+                ))}
+              </ul>
             </div>
-          )}
-          {this.state.messageShow && <MessageList />}
-        </div>
-        {!this.state.messageShow && <Footer />}
+            <Footer />
+          </div>
+        )}
+        {this.state.mouldShow && <Mould />}
+       
       </div>
     );
   }

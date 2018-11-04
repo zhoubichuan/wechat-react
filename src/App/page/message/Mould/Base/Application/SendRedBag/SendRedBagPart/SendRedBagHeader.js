@@ -1,11 +1,11 @@
 import React, { Component } from "react";
 
-class PopFloorHeader extends Component {
+class SendRedBagHeader extends Component {
   constructor() {
     super();
   }
   handleClick = () => {
-    this.props.sendPopFloorShowChild({ popFloorShow: false });
+    this.props.sendSendRedBagShowChild({ SendRedBagShow: false });
   };
   render() {
     return (
@@ -19,4 +19,4 @@ class PopFloorHeader extends Component {
     );
   }
 }
-export default PopFloorHeader;
+export default SendRedBagHeader;

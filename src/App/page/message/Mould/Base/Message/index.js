@@ -1,8 +1,7 @@
 import React, { Component } from "react";
 import "./MessageList.css";
-import PopFloor from "./PopFloor/PopFloor.js";
+
 import MessageListBody from "./MessageListPart/MessageListBody";
-import Application from "./MessageListPart/Application";
 
 class Get extends Component {
   constructor() {
@@ -149,18 +148,10 @@ class Get extends Component {
   render() {
     return (
       <div className={this.state.scrollStop ? "get stop-scroll" : "get"}>
-        {this.state.popFloorShow && (
-          <PopFloor
-            sendPopFloorShow={val => this.getPopFloorShow(val)}
-            sendSubmitData={val => this.getSubmitData(val)}
-          />
-        )}
+        
         <MessageListBody
           messageData={this.state.messageData}
           sendScrollStop={val => this.getScrollStop(val)}
-        />
-        <Application
-          sendPopFloorShow={val => this.getPopFloorShow(val)}
         />
       </div>
     );
