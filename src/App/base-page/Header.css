@@ -13,10 +13,11 @@
   flex-direction: row;
   justify-content: space-between;
   top: 0;
+  align-items: center;
 }
 
 .app-header ul li {
-  padding: 10px 0;
+  margin: 10px 0;
 }
 .app-header ul li a {
   color: wheat;
@@ -25,5 +26,8 @@
 }
 .app-header ul li.title {
 }
-.app-header ul li.other {
+.app-header ul li.more {
+  width: 18px;
+  height: 18px;
+  background: url("./more.jpg") -10px -7px;
 }

@@ -5,7 +5,6 @@ import { Link } from "react-router-dom";
 import Mould from "./Mould";
 import Footer from "../../base-page/Footer";
 
-
 import "./Message.css";
 
 class Message extends Component {
@@ -103,7 +102,7 @@ class Message extends Component {
             <Header>
               <li />
               <li>微信</li>
-              <li>更多</li>
+              <li className={"more"} />
             </Header>
             <Search />
             <div className={"content"}>
@@ -128,7 +127,6 @@ class Message extends Component {
           </div>
         )}
         {this.state.mouldShow && <Mould />}
-       
       </div>
     );
   }
