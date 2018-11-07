@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import Header from "../../base-page/Header";
 import Search from "../../base-page/Search";
 import Footer from "../../base-page/Footer";
-import "./Address.css";
+import "./Address.less";
 
 class Find extends Component {
   constructor() {

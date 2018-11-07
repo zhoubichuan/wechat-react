@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import "./app.css";
+import "./app.less";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Message from "./page/message/Message.js";
 import Address from "./page/address/Address.js";

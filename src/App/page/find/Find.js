@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import Header from "../../base-page/Header";
 import Footer from "../../base-page/Footer";
 import Mould from "./Mould";
-import "./Find.css";
+import "./Find.less";
 
 class Find extends Component {
   constructor() {

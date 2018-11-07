@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import "./MessageList.css";
+import "./MessageList.less";
 
 import MessageListBody from "./MessageListPart/MessageListBody";
 
@@ -148,7 +148,6 @@ class Get extends Component {
   render() {
     return (
       <div className={this.state.scrollStop ? "get stop-scroll" : "get"}>
-        
         <MessageListBody
           messageData={this.state.messageData}
           sendScrollStop={val => this.getScrollStop(val)}

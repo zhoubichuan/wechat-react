@@ -1,0 +1,77 @@
+.get {
+  background-color: aliceblue;
+  height: 100vh;
+  .nav {
+    position: fixed;
+    width: 100%;
+    color: white;
+    background-color: black;
+
+    line-height: 30px;
+    padding: 0 15px;
+    box-sizing: border-box;
+    ul {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      li {
+        padding: 10px 0;
+        a {
+          color: wheat;
+        }
+      }
+    }
+  }
+}
+
+.information {
+  margin: 0 auto;
+  li:nth-child(n + 2) {
+    margin-top: 10px;
+  }
+  li {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    .photo {
+      height: 30px;
+      width: 30px;
+      display: block;
+    }
+    .content {
+      margin-left: 10px;
+      .name {
+        display: inline;
+        font-size: 12px;
+        color: gray;
+      }
+    }
+  }
+}
+
+.red-bag {
+  width: 200px;
+  .instruction {
+    display: inline;
+  }
+  .bag {
+    background-color: yellow;
+    border-radius: 5px 5px 0 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    .ico {
+      height: 35px;
+      width: 30px;
+      background-color: red;
+      display: block;
+      margin: 0 10px 0 10px;
+      border-radius: 5px;
+    }
+    .text {
+      display: inline;
+    }
+  }
+}

@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 // import * as actions from "../../../../../../store/action";
 // import { connect } from "net";
-import "./index.css";
+import "./index.less";
 import SendRedBag from "./SendRedBag";
 
 class MessageListFooter extends Component {

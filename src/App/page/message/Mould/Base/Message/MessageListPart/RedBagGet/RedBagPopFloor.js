@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import "./pop.css";
+import "./pop.less";
 class ReadBagPopFloor extends Component {
   constructor() {
     super();

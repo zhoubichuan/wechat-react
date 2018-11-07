@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import SendRedBagHeader from "./SendRedBagPart/SendRedBagHeader";
 import SendRedBagFooter from "./SendRedBagPart/SendRedBagFooter";
 import SendRedBagBody from "./SendRedBagPart/SendRedBagBody";
-import "./index.css";
+import "./index.less";
 
 class SendPage extends Component {
   constructor() {

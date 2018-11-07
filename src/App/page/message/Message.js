@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 import Mould from "./Mould";
 import Footer from "../../base-page/Footer";
 
-import "./Message.css";
+import "./Message.less";
 
 class Message extends Component {
   constructor() {
