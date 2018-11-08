@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
-import "./Footer.css";
+import "./Footer.less";
 
 class Footer extends Component {
   constructor() {
@@ -11,13 +11,13 @@ class Footer extends Component {
       <div className="app-footer" component={"footer-component"}>
         <ul>
           <li>
-            <Link to="/message">信息</Link>
+            <Link to="/Message">信息</Link>
           </li>
           <li>
-            <Link to="/address">通讯录</Link>
+            <Link to="/Address">通讯录</Link>
           </li>
           <li>
-            <Link to="/find">发现</Link>
+            <Link to="/Find">发现</Link>
           </li>
           <li>
             <Link to="/Me">我</Link>
