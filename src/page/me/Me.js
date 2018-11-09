@@ -1,9 +1,9 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
+import "./Me.less";
 import Header from "../../base-page/Header";
 import Footer from "../../base-page/Footer";
 import Mould from "./Mould";
-import "./Me.less";
 
 class Me extends Component {
   constructor() {

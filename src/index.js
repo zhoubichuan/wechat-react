@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import App from "./router/app.js";
+import Router from "./router";
 import "./style-base.less";
 
-ReactDOM.render(<App />, document.querySelector("#root"));
+ReactDOM.render(<Router />, document.querySelector("#root"));
