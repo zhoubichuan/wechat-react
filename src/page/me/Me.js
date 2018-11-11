@@ -4,6 +4,12 @@ import "./Me.less";
 import Header from "../../base-page/Header";
 import Footer from "../../base-page/Footer";
 import Mould from "./Mould";
+import img1 from "./ico/1.png";
+import img2 from "./ico/2.png";
+import img3 from "./ico/3.png";
+import img4 from "./ico/4.png";
+import img5 from "./ico/5.png";
+import img6 from "./ico/6.png";
 
 class Me extends Component {
   constructor() {
@@ -11,36 +17,12 @@ class Me extends Component {
     this.state = {
       mouldShow: false,
       application: [
-        {
-          ico: "http://www.cdhdky.com/images/ttt.jpg",
-          title: "钱包",
-          route: "MoneyBag"
-        },
-        {
-          ico: "http://www.cdhdky.com/images/ttt.jpg",
-          title: "收藏",
-          route: "Collection"
-        },
-        {
-          ico: "http://www.cdhdky.com/images/ttt.jpg",
-          title: "相册",
-          route: "Album"
-        },
-        {
-          ico: "http://www.cdhdky.com/images/ttt.jpg",
-          title: "卡包",
-          route: "CardBag"
-        },
-        {
-          ico: "http://www.cdhdky.com/images/ttt.jpg",
-          title: "表情",
-          route: "Emoji"
-        },
-        {
-          ico: "http://www.cdhdky.com/images/ttt.jpg",
-          title: "设置",
-          route: "Setting"
-        }
+        { ico: img1, title: "钱包", route: "MoneyBag" },
+        { ico: img2, title: "收藏", route: "Collection" },
+        { ico: img3, title: "相册", route: "Album" },
+        { ico: img4, title: "卡包", route: "CardBag" },
+        { ico: img5, title: "表情", route: "Emoji" },
+        { ico: img6, title: "设置", route: "Setting" }
       ]
     };
   }
@@ -70,7 +52,10 @@ class Me extends Component {
                       <p>微信号：zbc159x</p>
                     </div>
                   </div>
-                  <div className={"right"}>{">"}</div>
+                  <div className={"right"}>
+                    <i className="code" />
+                    <i className="ico" />
+                  </div>
                 </Link>
               </div>
               <ul>

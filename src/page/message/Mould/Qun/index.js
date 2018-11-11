@@ -6,11 +6,14 @@ class Album extends Component {
   constructor() {
     super();
   }
+  handleClick = () => {
+    window.history.go(0);
+  };
   render() {
     return (
       <div component={"me-album-component"}>
         <Header>
-          <li onClick={console.log(this.porps)}>微信（6）</li>
+          <li onClick={this.handleClick}>微信（6）</li>
           <li>讨论区 前端进阶（397）</li>
           <li>...</li>
         </Header>

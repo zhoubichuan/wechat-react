@@ -1,16 +1,20 @@
 import React, { Component } from "react";
 import Header from "../../../../base-page/Header";
+import "./index.less";
 
 class Emoji extends Component {
   constructor() {
     super();
   }
+  handleClick = () => {
+    window.history.go(0);
+  };
   render() {
     return (
       <div component={"me-emoji-component"}>
         <Header>
-          <li>我</li>
-          <li>
+          <li onClick={this.handleClick}>我</li>
+          <li className="middle">
             <span>更多表情</span>
             <span>朋友表情</span>
           </li>

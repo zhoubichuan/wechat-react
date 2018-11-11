@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import Header from "../../../../base-page/Header";
+import "./index.less";
 
 class Setting extends Component {
   constructor() {
@@ -46,11 +47,14 @@ class Setting extends Component {
       ]
     };
   }
+  handleClick = () => {
+    window.history.go(0);
+  };
   render() {
     return (
       <div component={"me-setting-component"}>
         <Header>
-          <li>我</li>
+          <li onClick={this.handleClick}>我</li>
           <li>设置</li>
           <li />
         </Header>
@@ -58,7 +62,12 @@ class Setting extends Component {
           <ul>
             {this.state.setting.map((item, index) => (
               <li key={index}>
-                <Link to={"/Me/Setting/" + item.route}>{item.title}</Link>
+                <Link to={"/Me/Setting/" + item.route}>
+                  <span className={(index == 7 || index == 8) && "center"}>
+                    {item.title}
+                  </span>
+                  {index != 7 && index != 8 && <i className="ico" />}
+                </Link>
               </li>
             ))}
           </ul>
