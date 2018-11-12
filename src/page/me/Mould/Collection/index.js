@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import Header from "../../../../base-page/Header";
 import Search from "../../../../base-page/Search";
+import "./index.less";
 
 class Collection extends Component {
   constructor() {
@@ -18,17 +19,20 @@ class Collection extends Component {
       ]
     };
   }
+  handleClick = () => {
+    window.history.go(0);
+  };
   render() {
     return (
       <div component={"me-collection-component"}>
         <Header>
-          <li>我</li>
+          <li onClick={this.handleClick}>我</li>
           <li>收藏</li>
           <li>+</li>
         </Header>
         <div className={"me-collection"}>
           <Search />
-          <div calssName={"top"}>
+          <div className={"top"}>
             <ul>
               {this.state.application.map((item, index) => (
                 <li key={index}>{item.title}</li>

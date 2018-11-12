@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import Header from "../../../../base-page/Header";
-import "./index.css";
+import "./index.less";
 
 class MoneyBag extends Component {
   constructor() {
@@ -141,6 +141,21 @@ class MoneyBag extends Component {
           <li>钱包</li>
           <li />
         </Header>
+        <ul className="money-application">
+          <li>
+            <img src="http://www.cdhdky.com/images/ttt.jpg" />
+            <span>收付款</span>
+          </li>
+          <li>
+            <img src="http://www.cdhdky.com/images/ttt.jpg" />
+            <span>零钱</span>
+            <span>￥10.60</span>
+          </li>
+          <li>
+            <img src="http://www.cdhdky.com/images/ttt.jpg" />
+            <span>银行卡</span>
+          </li>
+        </ul>
         <div className={"money-bag"}>
           <div className={"application"}>
             {this.state.application.map((item, index) => (
