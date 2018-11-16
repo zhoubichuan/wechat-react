@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import Header from "../../../../base-page/Header";
 import { Link } from "react-router-dom";
 import "./index.less";
+import Mould from "./Mould";
 
 class PersonInformation extends Component {
   constructor() {
@@ -30,8 +31,8 @@ class PersonInformation extends Component {
               <li />
             </Header>
             <div className={"person-information"}>
-              <ul>
-                <li className={"photo"} onClick={this.handleClick2}>
+              <ul onClick={this.handleClick2}>
+                <li className={"photo"}>
                   <Link to={"/Me/PersonInformation/Photo"}>
                     <p>头像</p>
                     <div className="right">
@@ -41,35 +42,46 @@ class PersonInformation extends Component {
                   </Link>
                 </li>
                 <li className={"name"}>
-                  <p>名字</p>
-                  <div className="right">
-                    <span>会跑的鸡腿</span>
-                    <i className="ico" />
-                  </div>
+                  <Link to={"/Me/PersonInformation/Name"}>
+                    <p>名字</p>
+                    <div className="right">
+                      <span>会跑的鸡腿</span>
+                      <i className="ico" />
+                    </div>
+                  </Link>
                 </li>
                 <li className={"weixin"}>
-                  <p>微信号</p>
-                  <div>abc159x</div>
+                  <Link to={"/Me/PersonInformation/WeiXinNumber"}>
+                    <p>微信号</p>
+                    <div>abc159x</div>
+                  </Link>
                 </li>
                 <li className={"data-cord"}>
-                  <p>我的二维码</p>
-                  <div className="right">
-                    <i className="code" />
-                    <i className="ico" />
-                  </div>
+                  <Link to={"/Me/PersonInformation/MyCode"}>
+                    <p>我的二维码</p>
+                    <div className="right">
+                      <i className="code" />
+                      <i className="ico" />
+                    </div>
+                  </Link>
                 </li>
                 <li className={"more"}>
-                  <p>更多</p>
-                  <i className="ico" />
+                  <Link to={"/Me/PersonInformation/More"}>
+                    <p>更多</p>
+                    <i className="ico" />
+                  </Link>
                 </li>
                 <li className={"address"}>
-                  <p>我的地址</p>
-                  <i className="ico" />
+                  <Link to={"/Me/PersonInformation/MyAddress"}>
+                    <p>我的地址</p>
+                    <i className="ico" />
+                  </Link>
                 </li>
               </ul>
             </div>
           </div>
         )}
+        {this.state.showMould && <Mould />}
       </div>
     );
   }
