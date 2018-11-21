@@ -5,9 +5,9 @@ class Photo extends Component {
   constructor() {
     super();
   }
-    handleClick = () => {
-        window.history.go(0);
-    };
+  handleClick = () => {
+    window.history.go(0);
+  };
   render() {
     return (
       <div>
@@ -16,6 +16,7 @@ class Photo extends Component {
           <li>个人头像</li>
           <li>...</li>
         </Header>
+        <div>我的二维码</div>
       </div>
     );
   }

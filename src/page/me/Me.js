@@ -64,6 +64,7 @@ class Me extends Component {
                     <Link to={"/Me/" + item.route}>
                       <img src={item.ico} alt="" />
                       <p>{item.title}</p>
+                      <i class="ico" />
                     </Link>
                   </li>
                 ))}

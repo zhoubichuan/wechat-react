@@ -51,7 +51,7 @@ class PersonInformation extends Component {
                   </Link>
                 </li>
                 <li className={"weixin"}>
-                  <Link to={"/Me/PersonInformation/WeiXinNumber"}>
+                  <Link to={"#"}>
                     <p>微信号</p>
                     <div>abc159x</div>
                   </Link>

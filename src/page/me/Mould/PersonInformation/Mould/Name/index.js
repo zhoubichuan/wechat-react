@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import Header from "../../../../../../base-page/Header";
+import "./index.less";
 
 class Photo extends Component {
   constructor() {
@@ -16,7 +17,7 @@ class Photo extends Component {
           <li>设置名字</li>
           <li>完成</li>
         </Header>
-        <div>
+        <div className="name-content">
           <input value="会跑的鸡腿" />
         </div>
       </div>
