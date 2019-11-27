@@ -3,14 +3,18 @@ import * as Types from "../action-type";
 let initState = {
   showMessageRecordApplication: false
 };
+
 function setBags(money, redBagNum) {
   var bags = [];
   var avg = +money / +redBagNum;
   for (let i = 0; i < +redBagNum; i++) {
-    bags.push({ i: avg });
+    bags.push({
+      i: avg
+    });
   }
   return bags;
 }
+
 function reducer(state = initState, action) {
   switch (action.type) {
     case Types.SHOW_MESSAGE_RECORD_APPLICATION:
@@ -23,8 +27,8 @@ function reducer(state = initState, action) {
       return {
         ...state,
         redBagNum: action.redBagNum,
-        money: action.money,
-        bags: bags
+          money: action.money,
+          bags: bags
       };
     default:
       return state;

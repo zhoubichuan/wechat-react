@@ -1,0 +1,44 @@
+.app-header {
+  height: 50px;
+
+  ul {
+    position: fixed;
+    width: 100%;
+    color: white;
+    background-color: #3a393e;
+    line-height: 30px;
+    padding: 0 15px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    top: 0;
+    align-items: center;
+    z-index: 100;
+
+    li {
+      margin: 10px 0;
+      display: flex;
+      flex-direction: row;
+
+      span {
+        border: 1px solid gray;
+        padding: 0 5px;
+      }
+
+      a {
+        color: wheat;
+      }
+    }
+
+    li.back {}
+
+    li.title {}
+
+    li.more {
+      width: 18px;
+      height: 18px;
+      background: url("./more.jpg") -10px -7px;
+    }
+  }
+}

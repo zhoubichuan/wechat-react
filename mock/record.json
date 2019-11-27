@@ -1,0 +1,49 @@
+{
+  "code": 200,
+  "record": {
+    "pho": "http://www.cdhdky.com/images/ttt.jpg",
+    "name": "沙和尚",
+    "message": "大师兄师傅父被妖怪抓走了",
+    "money": "0.75",
+    "sendTime": 1540023179263,
+    "sum": 5,
+    "redBag": [
+      {
+        "photo": "http://www.cdhdky.com/images/ttt.jpg",
+        "time": "09-28 20:13",
+        "name": "小明",
+        "money": "1",
+        "total": "30"
+      },
+      {
+        "photo": "http://www.cdhdky.com/images/ttt.jpg",
+        "time": "09-28 20:13",
+        "name": "小k",
+        "money": "2",
+        "total": "30"
+      },
+      {
+        "photo": "http://www.cdhdky.com/images/ttt.jpg",
+        "time": "09-28 20:13",
+        "name": "小红",
+        "money": "4",
+        "total": "30"
+      },
+      {
+        "photo": "http://www.cdhdky.com/images/ttt.jpg",
+        "time": "09-28 20:13",
+        "name": "小红",
+        "money": "4",
+        "total": "30"
+      },
+      {
+        "photo": "http://www.cdhdky.com/images/ttt.jpg",
+        "time": "09-28 20:13",
+        "name": "小红",
+        "money": "4",
+        "total": "30"
+      }
+    ],
+    "self": false
+  }
+}

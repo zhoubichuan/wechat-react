@@ -1,14 +1,14 @@
-import React, { Component } from "react";
-import { HashRouter as Router, Route, Switch } from "react-router-dom";
-import { Provider } from "react-redux";
-import "./index.less";
-import Message from "../page/message/Message.js";
-import Address from "../page/address/Address.js";
-import Find from "../page/find/Find.js";
-import Me from "../page/me/Me.js";
-import Login from "../page/Login/Login.js";
+import React, { Component } from 'react'
+import { HashRouter as Router, Route, Switch } from 'react-router-dom'
+import { Provider } from 'react-redux'
+import './index.less'
+import Message from '@/components/message/Message.js'
+import Address from '@/components/address/Address.js'
+import Find from '@/components/find/Find.js'
+import Me from '@/components/me/Me.js'
+import Login from '@/components/Login/Login.js'
 
-import store from "../store";
+import store from '@/store'
 
 class App extends Component {
   render() {
@@ -25,7 +25,7 @@ class App extends Component {
           </Switch>
         </Router>
       </Provider>
-    );
+    )
   }
 }
-export default App;
+export default App

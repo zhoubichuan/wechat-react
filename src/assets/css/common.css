@@ -1,0 +1,190 @@
+.stop-scroll {
+  max-height: 100vh;
+  overflow: hidden;
+}
+.content {
+  height: 100vh;
+  padding-bottom: 40px;
+  box-sizing: border-box;
+  overflow: hidden;
+  background-color: #efeff4;
+}
+html::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+body::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+body {
+  position: relative;
+  display: block;
+}
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video,
+p {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+menu,
+nav,
+body {
+  font-size: 12px;
+  line-height: 1.5em;
+  font-family: "FrutigerNextLT-Regular", "Microsoft YaHei", Verdana, Arial,
+    Helvetica, sans-serif;
+  margin: 0 auto;
+  color: #000;
+  overflow-x: hidden;
+}
+ol,
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: #000;
+}
+img {
+  border: 0;
+  vertical-align: middle;
+}
+em {
+  font-style: normal;
+}
+input,
+button,
+select,
+textarea {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+}
+.clear {
+  clear: both;
+  width: 0;
+  height: 0;
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+  font-size: 0;
+  line-height: 0;
+}
+.clearfix {
+  zoom: 1;
+}
+.clearfix:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+input::-webkit-input-placeholder {
+  color: #999;
+  font-size: 12px;
+}
+input:-moz-placeholder {
+  color: #999;
+  font-size: 12px;
+}
+input::-moz-placeholder {
+  color: #999;
+  font-size: 12px;
+}
+input:-ms-input-placeholder {
+  color: #999;
+  font-size: 12px;
+}
+* {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
