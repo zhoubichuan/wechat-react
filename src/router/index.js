@@ -7,7 +7,6 @@ import Address from '@/components/address/Address.js'
 import Find from '@/components/find/Find.js'
 import Me from '@/components/me/Me.js'
 import Login from '@/components/Login/Login.js'
-
 import store from '@/store'
 
 class App extends Component {

@@ -1,18 +1,18 @@
-import * as Types from "../action-type";
+import * as Types from '../action-type'
 
 let initState = {
   showMessageRecordApplication: false
-};
+}
 
 function setBags(money, redBagNum) {
-  var bags = [];
-  var avg = +money / +redBagNum;
+  var bags = []
+  var avg = +money / +redBagNum
   for (let i = 0; i < +redBagNum; i++) {
     bags.push({
       i: avg
-    });
+    })
   }
-  return bags;
+  return bags
 }
 
 function reducer(state = initState, action) {
@@ -21,17 +21,17 @@ function reducer(state = initState, action) {
       return {
         ...state,
         showMessageRecordApplication: action.isShow
-      };
+      }
     case Types.SET_ARGU:
-      var bags = setBags(action.money, action.redBagNum);
+      var bags = setBags(action.money, action.redBagNum)
       return {
         ...state,
         redBagNum: action.redBagNum,
-          money: action.money,
-          bags: bags
-      };
+        money: action.money,
+        bags: bags
+      }
     default:
-      return state;
+      return state
   }
 }
-export default reducer;
+export default reducer
