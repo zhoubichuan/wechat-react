@@ -1,7 +1,21 @@
-import * as Types from '../action-type'
+import * as Types from './action-type'
 
 let initState = {
-  showMessageRecordApplication: false
+  showMessageRecordApplication: false,
+  isShowHeader: true,
+  isShowCommonPage: true,
+  isShowFooter: true,
+  isShowSearch: false,
+  isShowSearchDialog: false,
+  header: {},
+  redBagTyep: "commonRedBag",
+  redBagAmount: "",
+  redBagNumber: "",
+  sendMessage: "",
+  pageShow: false,
+  applianceShow: false,
+  pageStopScroll: false,
+  optionsList: {}
 }
 
 function setBags(money, redBagNum) {
@@ -22,16 +36,16 @@ function reducer(state = initState, action) {
         ...state,
         showMessageRecordApplication: action.isShow
       }
-    case Types.SET_ARGU:
-      var bags = setBags(action.money, action.redBagNum)
-      return {
-        ...state,
-        redBagNum: action.redBagNum,
-        money: action.money,
-        bags: bags
-      }
-    default:
-      return state
+      case Types.SET_ARGU:
+        var bags = setBags(action.money, action.redBagNum)
+        return {
+          ...state,
+          redBagNum: action.redBagNum,
+            money: action.money,
+            bags: bags
+        }
+        default:
+          return state
   }
 }
 export default reducer

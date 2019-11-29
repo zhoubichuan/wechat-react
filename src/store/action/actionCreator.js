@@ -1,4 +1,4 @@
-import * as Types from '../action-type'
+import * as Types from './actionTypes'
 let actons = {
   applicatonIsShow(isShow) {
     return {
