@@ -1,11 +1,22 @@
 import React, { Component } from 'react'
+
+import './Message.less'
 import Header from '../../public_components/Header'
 import Search from '../../public_components/Search'
 import { Link } from 'react-router-dom'
 import Mould from './Mould'
 import Footer from '../../public_components/Footer'
 
-import './Message.less'
+import actionCreator from '@/store/action/actionCreator'
+import { ADD, SQUARE } from '@/store/action/actionTypes'
+import store from '@/store/index'
+
+let action = actionCreator(ADD, 12)
+store.dispatch(action)
+console.log(store.getState())
+let action2 = actionCreator(SQUARE, 2)
+store.dispatch(action2)
+console.log(store.getState())
 
 class Message extends Component {
   constructor() {
@@ -92,7 +103,9 @@ class Message extends Component {
     })
   }
   handleClick = () => {
-    this.setState({ mouldShow: true })
+    this.setState({
+      mouldShow: true
+    })
   }
   render() {
     return (
@@ -101,8 +114,7 @@ class Message extends Component {
           <div className={'message'}>
             <Header>
               <li />
-              <li>微信</li>
-              <li className={'more'} />
+              <li> 微信 </li> <li className={'more'} />
             </Header>
             <Search />
             <div className={'content'}>
@@ -113,11 +125,10 @@ class Message extends Component {
                       <div className={'left'}>
                         <img src={item.ico} alt="" />
                         <div>
-                          <p>{item.title}</p>
-                          <p>{item.tips}</p>
+                          <p> {item.title} </p> <p> {item.tips} </p>
                         </div>
                       </div>
-                      <div className={'right'}>{item.time}</div>
+                      <div className={'right'}> {item.time} </div>
                     </Link>
                   </li>
                 ))}

@@ -1,5 +1,8 @@
-import reducer from './reducer/index'
-import { createStore } from 'redux'
+import {
+  createStore
+} from 'redux'
+import reducer from './reducer'
 
 const store = createStore(reducer)
+
 export default store
