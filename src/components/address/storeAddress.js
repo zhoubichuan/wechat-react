@@ -1,5 +1,7 @@
 // 建议reducer使用这种结构
-import { SQUARE } from '@/store/action/actionTypes'
+import {
+  SQUARE
+} from '@/store/action/actionTypes'
 
 // 1.定义默认数据
 const initialState = {
@@ -10,9 +12,11 @@ const initialState = {
 const reducer = (state = initialState, action) => {
   switch (action.type) {
     case SQUARE:
-      return { ...state, a: action.value * action.value }
-    default:
-      return state
+      return {
+        ...state, a: action.value * action.value
+      }
+      default:
+        return state
   }
 }
 // 3.导出

@@ -1,19 +1,23 @@
 // 建议reducer使用这种结构
 import {
-  ADD
+  SQUARE
 } from '@/store/action/actionTypes'
 
 // 1.定义默认数据
 const initialState = {
-  a: 1
+  headerConfig: {
+    left: '',
+    middle: '微信',
+    right: ''
+  }
 }
 
 // 2.Reducer
 const reducer = (state = initialState, action) => {
   switch (action.type) {
-    case ADD:
+    case SQUARE:
       return {
-        ...state, a: state.a + action.value
+        ...state, a: action.value * action.value
       }
       default:
         return state

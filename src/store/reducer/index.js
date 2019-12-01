@@ -1,12 +1,22 @@
 import add from './add'
 import square from './square'
+import common from '@/store/reducer/common'
+import storeAddress from '@/components/address/storeAddress.js'
+import storeFind from '@/components/find/storeFind.js'
+import storeMe from '@/components/me/storeMe.js'
+import storeMessage from '@/components/message/storeMessage.js'
 import {
   combineReducers
 } from 'redux'
 
 const reducers = combineReducers({
   add,
-  square
+  square,
+  common,
+  storeAddress,
+  storeFind,
+  storeMe,
+  storeMessage
 })
 export default reducers
 
