@@ -4,7 +4,6 @@ import './Me.less'
 import store from '@/store/index'
 import Header from '../../public_components/Header'
 import Footer from '../../public_components/Footer'
-import Mould from './Mould'
 import img1 from './ico/1.png'
 import img2 from './ico/2.png'
 import img3 from './ico/3.png'
@@ -77,7 +76,6 @@ class Me extends Component {
             <Footer />
           </div>
         )}
-        {this.state.mouldShow && <Mould />}
       </div>
     )
   }

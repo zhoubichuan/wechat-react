@@ -1,23 +1,22 @@
-import React, { Component } from "react";
-import SendRedBagHeader from "./SendRedBagPart/SendRedBagHeader";
-import SendRedBagFooter from "./SendRedBagPart/SendRedBagFooter";
-import SendRedBagBody from "./SendRedBagPart/SendRedBagBody";
-import "./index.less";
+import React, { Component } from 'react'
+import SendRedBagHeader from './SendRedBagPart/SendRedBagHeader'
+import SendRedBagFooter from './SendRedBagPart/SendRedBagFooter'
+import SendRedBagBody from './SendRedBagPart/SendRedBagBody'
+import './index.less'
 
 class SendPage extends Component {
   constructor() {
-    super();
-    this.state = {};
+    super()
   }
   getSendRedBagShowChild(val) {
-    this.props.sendSendRedBagShow(val);
+    this.props.sendSendRedBagShow(val)
   }
   getSubmit(val) {
-    this.props.sendSubmitData(val);
+    this.props.sendSubmitData(val)
   }
   render() {
     return (
-      <div className={"send-red-bag"}>
+      <div className={'send-red-bag'}>
         <SendRedBagHeader
           sendSendRedBagShowChild={val => this.getSendRedBagShowChild(val)}
         />
@@ -27,7 +26,7 @@ class SendPage extends Component {
         />
         <SendRedBagFooter />
       </div>
-    );
+    )
   }
 }
-export default SendPage;
+export default SendPage

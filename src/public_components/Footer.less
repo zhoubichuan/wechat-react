@@ -1,5 +1,6 @@
 .app-footer {
   height: 40px;
+
   ul {
     position: fixed;
     bottom: 0;
@@ -10,24 +11,34 @@
     width: 100%;
     padding-top: 5px;
     background-color: #fffffd;
+
     li {
       width: 25%;
       text-align: center;
 
       height: 40px;
+
       a {
         display: block;
+
+        &.active {
+          color: green;
+        }
       }
     }
+
     li:nth-of-type(2)::before {
       background-position-x: -110px;
     }
+
     li:nth-of-type(3)::before {
       background-position-x: -190px;
     }
+
     li:nth-of-type(4)::before {
       background-position-x: -270px;
     }
+
     li::before {
       margin: 0 auto;
       content: "";

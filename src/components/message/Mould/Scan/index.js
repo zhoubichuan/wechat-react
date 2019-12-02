@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import Header from "../../../../public_components/Header";
+import Header from "@/public_components/Header";
 
 class Scan extends Component {
   constructor() {

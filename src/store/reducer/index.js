@@ -3,8 +3,8 @@ import square from './square'
 import common from '@/store/reducer/common'
 import storeAddress from '@/components/address/storeAddress.js'
 import storeFind from '@/components/find/storeFind.js'
-import storeMe from '@/components/me/storeMe.js'
-import storeMessage from '@/components/message/storeMessage.js'
+import storeMe from '@/components/Me/storeMe.js'
+import storeMessage from '@/components/Message/storeMessage.js'
 import {
   combineReducers
 } from 'redux'

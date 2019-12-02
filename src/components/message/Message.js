@@ -11,7 +11,6 @@ import store from '@/store/index'
 class Message extends Component {
   constructor() {
     super()
-    this.setState()
     var { storeMessage } = store.getState()
     this.state = {
       mouldShow: false,

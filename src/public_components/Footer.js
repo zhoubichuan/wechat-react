@@ -1,27 +1,23 @@
 import React, { Component } from 'react'
-import { Link } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 import './Footer.less'
 
+const nav = [
+  { link: 'Message', text: '信息' },
+  { link: 'Address', text: '通讯录' },
+  { link: 'Find', text: '发现' },
+  { link: 'Me', text: '我' }
+]
 class Footer extends Component {
-  constructor() {
-    super()
-  }
   render() {
     return (
-      <div className="app-footer" component={'footer-component'}>
+      <div className="app-footer">
         <ul>
-          <li>
-            <Link to="/Message"> 信息 </Link>
-          </li>
-          <li>
-            <Link to="/Address"> 通讯录 </Link>
-          </li>
-          <li>
-            <Link to="/Find"> 发现 </Link>
-          </li>
-          <li>
-            <Link to="/Me"> 我 </Link>
-          </li>
+          {nav.map((item, key) => (
+            <li key={key}>
+              <NavLink to={`/${item.link}`}>{item.text}</NavLink>
+            </li>
+          ))}
         </ul>
       </div>
     )
