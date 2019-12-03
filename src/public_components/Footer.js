@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React from 'react'
 import { NavLink } from 'react-router-dom'
 import './Footer.less'
 
@@ -8,19 +8,16 @@ const nav = [
   { link: 'Find', text: '发现' },
   { link: 'Me', text: '我' }
 ]
-class Footer extends Component {
-  render() {
-    return (
-      <div className="app-footer">
-        <ul>
-          {nav.map((item, key) => (
-            <li key={key}>
-              <NavLink to={`/${item.link}`}>{item.text}</NavLink>
-            </li>
-          ))}
-        </ul>
-      </div>
-    )
-  }
-}
+
+let Footer = () => (
+  <div className="app-footer">
+    <ul>
+      {nav.map((item, key) => (
+        <li key={key}>
+          <NavLink to={`/${item.link}`}>{item.text}</NavLink>
+        </li>
+      ))}
+    </ul>
+  </div>
+)
 export default Footer

@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
 import './Me.less'
-import store from '@/store/index'
 import Header from '../../public_components/Header'
 import Footer from '../../public_components/Footer'
 import img1 from './ico/1.png'
@@ -12,12 +11,12 @@ import img5 from './ico/5.png'
 import img6 from './ico/6.png'
 
 const application = [
-  { ico: img1, title: '钱包', route: 'MoneyBag' },
-  { ico: img2, title: '收藏', route: 'Collection' },
-  { ico: img3, title: '相册', route: 'Album' },
-  { ico: img4, title: '卡包', route: 'CardBag' },
-  { ico: img5, title: '表情', route: 'Emoji' },
-  { ico: img6, title: '设置', route: 'Setting' }
+  { ico: img1, title: '钱包', route: 'MeMoneyBag' },
+  { ico: img2, title: '收藏', route: 'MeCollection' },
+  { ico: img3, title: '相册', route: 'MeEmoji' },
+  { ico: img4, title: '卡包', route: 'MeCardBag' },
+  { ico: img5, title: '表情', route: 'MeEmoji' },
+  { ico: img6, title: '设置', route: 'MeSetting' }
 ]
 class Me extends Component {
   constructor(props) {
@@ -64,7 +63,7 @@ class Me extends Component {
               <ul>
                 {this.state.application.map((item, index) => (
                   <li key={index} onClick={this.handleClick}>
-                    <Link to={'/Me/' + item.route}>
+                    <Link to={item.route}>
                       <img src={item.ico} alt="" />
                       <p>{item.title}</p>
                       <i class="ico" />
