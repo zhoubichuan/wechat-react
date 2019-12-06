@@ -1,8 +1,6 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
 import './Me.less'
-import Header from '../../public_components/Header'
-import Footer from '../../public_components/Footer'
 import img1 from './ico/1.png'
 import img2 from './ico/2.png'
 import img3 from './ico/3.png'
@@ -43,7 +41,6 @@ class Me extends Component {
       <div>
         {!this.state.mouldShow && (
           <div>
-            <Header data={this.state.headerConfig}></Header>
             <div className={'me'} component={'me-component'}>
               <div className={'information'} onClick={this.handleClick}>
                 <Link to={'/Me/PersonInformation'}>
@@ -72,7 +69,6 @@ class Me extends Component {
                 ))}
               </ul>
             </div>
-            <Footer />
           </div>
         )}
       </div>

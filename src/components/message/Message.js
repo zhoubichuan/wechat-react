@@ -2,10 +2,8 @@ import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
 
 import './Message.less'
-import Header from '@/public_components/Header'
 import Search from '@/public_components/Search'
 import Mould from './Mould'
-import Footer from '@/public_components/Footer'
 import store from '@/store/index'
 
 class Message extends Component {
@@ -33,7 +31,6 @@ class Message extends Component {
       <div>
         {!this.state.mouldShow && (
           <div className={'message'}>
-            <Header data={this.state.headerConfig}></Header>
             <Search />
             <div className={'content'}>
               <ul>
@@ -52,7 +49,6 @@ class Message extends Component {
                 ))}
               </ul>
             </div>
-            <Footer />
           </div>
         )}
         {this.state.mouldShow && <Mould />}

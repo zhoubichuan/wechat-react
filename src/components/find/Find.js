@@ -1,7 +1,5 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
-import Header from '../../public_components/Header'
-import Footer from '../../public_components/Footer'
 import Mould from './Mould'
 import './Find.less'
 
@@ -75,7 +73,6 @@ class Find extends Component {
       <div>
         {!this.state.mouldShow && (
           <div>
-            <Header data={this.state.headerConfig}></Header>
             <div className={'find'} component={'find-component'}>
               <div className={'top'}>
                 <ul>
@@ -90,7 +87,6 @@ class Find extends Component {
                 </ul>
               </div>
             </div>
-            <Footer />
           </div>
         )}
         {this.state.mouldShow && <Mould />}

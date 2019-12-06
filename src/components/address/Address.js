@@ -1,8 +1,7 @@
 import React, { Component } from 'react'
-import Header from '../../public_components/Header'
 import Search from '../../public_components/Search'
-import Footer from '../../public_components/Footer'
 import './Address.less'
+import store from '@/store/index'
 
 const application = [
   { ico: 'http://www.cdhdky.com/images/ttt.jpg', title: '新的朋友' },
@@ -37,18 +36,20 @@ class Find extends Component {
     super()
     this.state = {
       application,
-      linkPeople,
-      headerConfig: {
-        left: '',
-        middle: '通讯录',
-        right: '其他'
-      }
+      linkPeople
     }
+    let headerConfig = {
+      left: '',
+      middle: '通讯录',
+      right: '其他'
+    }
+    window.$store.dispatch({ type: 'test', text: headerConfig })
+    let data = window.$store.getState()
+    debugger
   }
   render() {
     return (
       <div>
-        <Header data={this.state.headerConfig}></Header>
         <div className={'address'} component={'address-component'}>
           <Search />
           <div className={'top'}>
@@ -72,7 +73,6 @@ class Find extends Component {
             </ul>
           </div>
         </div>
-        <Footer />
       </div>
     )
   }

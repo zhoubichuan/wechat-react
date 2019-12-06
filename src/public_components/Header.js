@@ -10,8 +10,7 @@ class Header extends Component {
   componentDidMount() {}
   componentWillUnmount() {}
   render() {
-    let { left = 'left', middle = 'middle', right = 'right' } =
-      this.props.data || {}
+    let { left = '', middle = '', right = '' } = this.state.common.headerConfig
     return (
       <div className={'app-header'} component={'header-component'}>
         <ul>
