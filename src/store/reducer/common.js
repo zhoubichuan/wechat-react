@@ -1,6 +1,6 @@
 // 建议reducer使用这种结构
 import {
-  SQUARE
+  SETHEADCONFIG
 } from '@/store/action/actionTypes'
 
 // 1.定义默认数据
@@ -15,9 +15,10 @@ const initialState = {
 // 2.Reducer
 const reducer = (state = initialState, action) => {
   switch (action.type) {
-    case SQUARE:
+    case SETHEADCONFIG:
+      debugger
       return {
-        ...state, a: action.value * action.value
+        ...state, headerConfig: action.value
       }
       default:
         return state

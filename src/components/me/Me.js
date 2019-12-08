@@ -43,7 +43,7 @@ class Me extends Component {
           <div>
             <div className={'me'} component={'me-component'}>
               <div className={'information'} onClick={this.handleClick}>
-                <Link to={'/Me/PersonInformation'}>
+                <Link to={'/MeInformation'}>
                   <div className={'left'}>
                     <img src="http://www.cdhdky.com/images/ttt.jpg" alt="" />
                     <div>

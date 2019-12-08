@@ -43,8 +43,8 @@ class Find extends Component {
       middle: '通讯录',
       right: '其他'
     }
-    window.$store.dispatch({ type: 'test', text: headerConfig })
-    let data = window.$store.getState()
+    store.dispatch({ type: 'SETHEADCONFIG', text: headerConfig })
+    let data = store.getState()
     debugger
   }
   render() {
