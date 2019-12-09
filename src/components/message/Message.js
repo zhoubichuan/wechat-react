@@ -14,6 +14,12 @@ class Message extends Component {
       mouldShow: false,
       ...storeMessage
     }
+    let headerConfig = {
+      left: '',
+      middle: '微信',
+      right: ''
+    }
+    store.dispatch({ type: 'common', text: headerConfig })
   }
   componentWillUnmount() {}
   handleClick = () => {

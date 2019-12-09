@@ -7,14 +7,19 @@ class Header extends Component {
     super(props)
     this.state = store.getState()
   }
-  componentDidMount() {}
+  componentDidMount() {
+    this.changeHeaderConfig()
+  }
   componentWillUnmount() {}
+  changeHeaderConfig() {
+    let { common } = store.getState()
+    this.setState({ common })
+  }
   render() {
     let { left = '', middle = '', right = '' } = this.state.common.headerConfig
     return (
-      <div className={'app-header'} component={'header-component'}>
+      <div className={'header'} component={'header-component'}>
         <ul>
-          {/* {React.Children.map(this.props.children, (item, index) => item)} */}
           <li>{left}</li>
           <li className={'title'}>{middle}</li>
           <li>{right}</li>

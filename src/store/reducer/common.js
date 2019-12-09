@@ -15,10 +15,9 @@ const initialState = {
 // 2.Reducer
 const reducer = (state = initialState, action) => {
   switch (action.type) {
-    case SETHEADCONFIG:
-      debugger
+    case 'common':
       return {
-        ...state, headerConfig: action.value
+        ...state, headerConfig: action.text
       }
       default:
         return state

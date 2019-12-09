@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
 import './Me.less'
+import store from '@/store/index'
+
 import img1 from './ico/1.png'
 import img2 from './ico/2.png'
 import img3 from './ico/3.png'
@@ -22,13 +24,14 @@ class Me extends Component {
 
     this.state = {
       mouldShow: false,
-      application,
-      headerConfig: {
-        left: '',
-        middle: '我',
-        right: ''
-      }
+      application
     }
+    let headerConfig = {
+      left: '',
+      middle: '我',
+      right: ''
+    }
+    store.dispatch({ type: 'common', text: headerConfig })
   }
   handleClick = e => {
     this.setState({
