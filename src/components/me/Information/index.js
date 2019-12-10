@@ -1,89 +1,77 @@
-import React, { Component } from "react";
-import Header from "@/public_components/Header";
-import { Link } from "react-router-dom";
-import "./index.less";
-import Mould from "./Mould";
+import React, { Component } from 'react'
+import Header from '@/public_components/Header'
+import { Link } from 'react-router-dom'
+import './index.less'
 
 class PersonInformation extends Component {
   constructor() {
-    super();
+    super()
     this.state = {
       showMould: false,
-      personData: [{ title: "头像", img: "", content: "", ico: "" }]
-    };
+      personData: [
+        {
+          title: '头像',
+          img: 'http://www.cdhdky.com/images/ttt.jpg',
+          link: 'MeInformationPhoto'
+        },
+        {
+          title: '名字',
+          img: 'http://www.cdhdky.com/images/ttt.jpg',
+          link: 'MeInformationPhoto'
+        },
+        {
+          title: '微信号',
+          img: 'http://www.cdhdky.com/images/ttt.jpg',
+          link: 'MeInformationPhoto'
+        },
+        {
+          title: '我的二维码',
+          img: 'http://www.cdhdky.com/images/ttt.jpg',
+          link: 'MeInformationCode'
+        },
+        {
+          title: '更多',
+          img: 'http://www.cdhdky.com/images/ttt.jpg',
+          link: 'MeInformationMore'
+        },
+        {
+          title: '我的地址',
+          img: 'http://www.cdhdky.com/images/ttt.jpg',
+          link: 'MeInformationAddress'
+        }
+      ]
+    }
   }
   handleClick = () => {
-    window.history.go(0);
-  };
+    window.history.go(0)
+  }
   handleClick2 = e => {
     this.setState({
       showMould: true
-    });
-  };
+    })
+  }
   render() {
     return (
-      <div component={"me-personinformation-component"}>
-        {!this.state.showMould && (
-          <div>
-            <Header>
-              <li onClick={this.handleClick}>我</li>
-              <li>个人信息</li>
-              <li />
-            </Header>
-            <div className={"person-information"}>
-              <ul onClick={this.handleClick2}>
-                <li className={"photo"}>
-                  <Link to={"/Me/PersonInformation/Photo"}>
-                    <p>头像</p>
+      <div component={'me-personinformation-component'}>
+        <div>
+          <div className={'person-information'}>
+            <ul onClick={this.handleClick2}>
+              {this.state.personData.map((item, index) => (
+                <li key={index} className={'photo'}>
+                  <Link to={item.link}>
+                    <p>{item.title}</p>
                     <div className="right">
-                      <img src="http://www.cdhdky.com/images/ttt.jpg" alt="" />
+                      <img src={item.ico} alt="" />
                       <i className="ico" />
                     </div>
                   </Link>
                 </li>
-                <li className={"name"}>
-                  <Link to={"/Me/PersonInformation/Name"}>
-                    <p>名字</p>
-                    <div className="right">
-                      <span>会跑的鸡腿</span>
-                      <i className="ico" />
-                    </div>
-                  </Link>
-                </li>
-                <li className={"weixin"}>
-                  <Link to={"#"}>
-                    <p>微信号</p>
-                    <div>abc159x</div>
-                  </Link>
-                </li>
-                <li className={"data-cord"}>
-                  <Link to={"/Me/PersonInformation/MyCode"}>
-                    <p>我的二维码</p>
-                    <div className="right">
-                      <i className="code" />
-                      <i className="ico" />
-                    </div>
-                  </Link>
-                </li>
-                <li className={"more"}>
-                  <Link to={"/Me/PersonInformation/More"}>
-                    <p>更多</p>
-                    <i className="ico" />
-                  </Link>
-                </li>
-                <li className={"address"}>
-                  <Link to={"/Me/PersonInformation/MyAddress"}>
-                    <p>我的地址</p>
-                    <i className="ico" />
-                  </Link>
-                </li>
-              </ul>
-            </div>
+              ))}
+            </ul>
           </div>
-        )}
-        {this.state.showMould && <Mould />}
+        </div>
       </div>
-    );
+    )
   }
 }
-export default PersonInformation;
+export default PersonInformation
