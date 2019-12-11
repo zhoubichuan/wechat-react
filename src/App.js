@@ -19,14 +19,215 @@ import MeCardBag from '@/components/Me/CardBag'
 import MeCollection from '@/components/Me/Collection'
 import MeEmoji from '@/components/Me/Emoji'
 import MeInformation from '@/components/Me/Information'
+import MeInformationPhoto from '@/components/Me/Information/Photo'
+import MeInformationName from '@/components/Me/Information/Name'
+import MeInformationMore from '@/components/Me/Information/More'
+import MeInformationAddress from '@/components/Me/Information/Address'
+import MeInformationCode from '@/components/Me/Information/Code'
+import MeInformationNumber from '@/components/Me/Information/Number'
 import MeMoneyBag from '@/components/Me/MoneyBag'
 import MeSetting from '@/components/Me/Setting'
 import Login from '@/components/Login/Login'
 
-class App extends Component {
-  constructor() {
-    super()
+const routeData = [
+  {
+    path: '/',
+    component: Message
+  },
+  {
+    path: '/Message',
+    component: Message
+  },
+  {
+    path: '/MessageSetting:id',
+    component: Message
+  },
+  {
+    path: '/MessagePeople:id',
+    component: Message
+  },
+  {
+    path: '/people:id',
+    component: Message
+  },
+  {
+    path: '/people:id',
+    component: Message
+  },
+  {
+    path: '/address',
+    component: Address
+  },
+  {
+    path: '/addressFriends',
+    component: Address
+  },
+  {
+    path: '/addressNumber',
+    component: Address
+  },
+  {
+    path: '/addressTalk',
+    component: Address
+  },
+  {
+    path: '/addressTips',
+    component: Address
+  },
+  {
+    path: '/addressPeople:id',
+    component: Address
+  },
+  {
+    path: '/addressPeopleSettingAndTips',
+    component: Address
+  },
+  {
+    path: '/addressPeopleFriend:id',
+    component: Address
+  },
+  {
+    path: '/addressPeopleMoreInformation:id',
+    component: Address
+  },
+  {
+    path: '/sendInformation',
+    component: Address
+  },
+  {
+    path: '/find',
+    component: Find
+  },
+  {
+    path: '/findFriend',
+    component: Find
+  },
+  {
+    path: '/findGaMe',
+    component: Find
+  },
+  {
+    path: '/findNearby',
+    component: Find
+  },
+  {
+    path: '/findProgram',
+    component: Find
+  },
+  {
+    path: '/findScan',
+    component: Find
+  },
+  {
+    path: '/findSearch',
+    component: Find
+  },
+  {
+    path: '/findShake',
+    component: Find
+  },
+  {
+    path: '/findShop',
+    component: Find
+  },
+  {
+    path: '/Me',
+    component: Me
+  },
+  {
+    path: '/MeInformation',
+    component: MeInformation
+  },
+  {
+    path: '/MeInformationAddress',
+    component: MeInformationAddress
+  },
+  {
+    path: '/MeInformationCode',
+    component: MeInformationCode
+  },
+  {
+    path: '/MeInformationMore',
+    component: MeInformationMore
+  },
+  {
+    path: '/MeInformationName',
+    component: MeInformationName
+  },
+  {
+    path: '/MeInformationPhoto',
+    component: MeInformationPhoto
+  },
+  {
+    path: '/MeInformationNumber',
+    component: MeInformationNumber
+  },
+  {
+    path: '/MeAlbum',
+    component: MeAlbum
+  },
+  {
+    path: '/MeCardBag',
+    component: MeCardBag
+  },
+  {
+    path: '/MeCollection',
+    component: MeCollection
+  },
+  {
+    path: '/MeEmoji',
+    component: MeEmoji
+  },
+  {
+    path: '/MeEmoji',
+    component: MeEmoji
+  },
+  {
+    path: '/MeMoneyBag',
+    component: MeMoneyBag
+  },
+  {
+    path: '/MeSetting',
+    component: MeSetting
+  },
+  {
+    path: '/MeSettingAccountSafe',
+    component: Me
+  },
+  {
+    path: '/MeSettingNewMessageNote',
+    component: Me
+  },
+  {
+    path: '/MeSettingPrivacy',
+    component: Me
+  },
+  {
+    path: '/MeSettingCommon',
+    component: Me
+  },
+  {
+    path: '/MeSettingHelpAndFeedback',
+    component: Me
+  },
+  {
+    path: '/MeSettingAboutWeChate',
+    component: Me
+  },
+  {
+    path: '/MeSettingWeChatePlugin',
+    component: Me
+  },
+  {
+    path: '/MeSettingChangeAcount',
+    component: Me
+  },
+  {
+    path: '/MeSettingOutLogin',
+    component: Me
   }
+]
+class App extends Component {
   render() {
     return (
       <Provider store={store}>
@@ -64,11 +265,21 @@ class App extends Component {
               <Route path="/findShop" component={Find} />
               <Route path="/Me" component={Me} />
               <Route path="/MeInformation" component={MeInformation} />
-              <Route path="/MeInformationAddress" component={Me} />
-              <Route path="/MeInformationCode" component={Me} />
-              <Route path="/MeInformationMore" component={Me} />
-              <Route path="/MeInformationNaMe" component={Me} />
-              <Route path="/MeInformationPhoto" component={Me} />
+              <Route
+                path="/MeInformationAddress"
+                component={MeInformationAddress}
+              />
+              <Route path="/MeInformationCode" component={MeInformationCode} />
+              <Route path="/MeInformationMore" component={MeInformationMore} />
+              <Route path="/MeInformationName" component={MeInformationName} />
+              <Route
+                path="/MeInformationPhoto"
+                component={MeInformationPhoto}
+              />
+              <Route
+                path="/MeInformationNumber"
+                component={MeInformationNumber}
+              />
               <Route path="/MeAlbum" component={MeAlbum} />
               <Route path="/MeCardBag" component={MeCardBag} />
               <Route path="/MeCollection" component={MeCollection} />
