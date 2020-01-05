@@ -1,8 +1,8 @@
 import ReactDOM from 'react-dom'
 import { Provider } from 'react-redux'
 import store from '@/store'
-import Header from '@/public_components/Header'
-import Footer from '@/public_components/Footer'
+// import Header from '@/public_components/Header'
+// import Footer from '@/public_components/Footer'
 import React, { Component } from 'react'
 import {
   BrowserRouter,
@@ -233,7 +233,7 @@ class App extends Component {
       <Provider store={store}>
         <Router>
           <div>
-            <Header />
+            {/* <Header /> */}
             <Switch>
               <Route exact path="/" component={Message} />
               <Route path="/Message" component={Message} />
@@ -297,7 +297,7 @@ class App extends Component {
               <Route path="/MeSettingOutLogin" component={Me} />
               <Route path="/Login" component={Login} />
             </Switch>
-            <Footer />
+            {/* <Footer /> */}
           </div>
         </Router>
       </Provider>

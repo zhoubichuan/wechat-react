@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
 import './Me.less'
 import store from '@/store/index'
+import Main from '@/public_components/Main'
 
 import img1 from './ico/1.png'
 import img2 from './ico/2.png'
@@ -26,22 +27,22 @@ class Me extends Component {
       mouldShow: false,
       application
     }
-    let headerConfig = {
-      left: '',
-      middle: '我',
-      right: ''
+    this.initConfig = {
+      header: {
+        left: '',
+        middle: '我',
+        right: ''
+      }
     }
-    store.dispatch({ type: 'common', text: headerConfig })
   }
   handleClick = e => {
     this.setState({
       mouldShow: true
     })
   }
-
   render() {
     return (
-      <div>
+      <Main mainConfig={this.initConfig}>
         {!this.state.mouldShow && (
           <div>
             <div className={'me'} component={'me-component'}>
@@ -66,7 +67,7 @@ class Me extends Component {
                     <Link to={item.route}>
                       <img src={item.ico} alt="" />
                       <p>{item.title}</p>
-                      <i class="ico" />
+                      <i className="ico" />
                     </Link>
                   </li>
                 ))}
@@ -74,7 +75,7 @@ class Me extends Component {
             </div>
           </div>
         )}
-      </div>
+      </Main>
     )
   }
 }

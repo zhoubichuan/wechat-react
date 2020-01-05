@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import Search from '../../public_components/Search'
+import Main from '@/public_components/Main'
 import './Address.less'
 import store from '@/store/index'
 
@@ -38,20 +38,19 @@ class Find extends Component {
       application,
       linkPeople
     }
-    let headerConfig = {
-      left: '',
-      middle: '通讯录',
-      right: '其他'
+    this.initConfig = {
+      header: {
+        left: '',
+        middle: '通讯录',
+        right: '其他'
+      },
+      search: true
     }
-    store.dispatch({ type: 'common', text: headerConfig })
   }
-  componentDidMount() {}
-  componentWillUnmount() {}
   render() {
     return (
-      <div>
+      <Main mainConfig={this.initConfig}>
         <div className={'address'} component={'address-component'}>
-          <Search />
           <div className={'top'}>
             <ul>
               {this.state.application.map((item, index) => (
@@ -73,7 +72,7 @@ class Find extends Component {
             </ul>
           </div>
         </div>
-      </div>
+      </Main>
     )
   }
 }

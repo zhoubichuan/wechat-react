@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import Header from '@/public_components/Header'
+import Main from '@/public_components/Main'
 import { Link } from 'react-router-dom'
 import './index.less'
 
@@ -52,7 +52,7 @@ class PersonInformation extends Component {
   }
   render() {
     return (
-      <div component={'me-personinformation-component'}>
+      <Main component={'me-personinformation-component'}>
         <div>
           <div className={'person-information'}>
             <ul onClick={this.handleClick2}>
@@ -70,7 +70,7 @@ class PersonInformation extends Component {
             </ul>
           </div>
         </div>
-      </div>
+      </Main>
     )
   }
 }

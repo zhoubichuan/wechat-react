@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
 
 import './Message.less'
-import Search from '@/public_components/Search'
+import Main from '@/public_components/Main'
 import Mould from './Mould'
 import store from '@/store/index'
 
@@ -14,14 +14,15 @@ class Message extends Component {
       mouldShow: false,
       ...storeMessage
     }
-    let headerConfig = {
-      left: '',
-      middle: '微信',
-      right: ''
+    this.initConfig = {
+      header: {
+        left: '',
+        middle: '微信',
+        right: ''
+      },
+      search: true
     }
-    store.dispatch({ type: 'common', text: headerConfig })
   }
-  componentWillUnmount() {}
   handleClick = () => {
     this.setState({
       mouldShow: false
@@ -34,10 +35,9 @@ class Message extends Component {
   }
   render() {
     return (
-      <div>
+      <Main mainConfig={this.initConfig}>
         {!this.state.mouldShow && (
           <div className={'message'}>
-            <Search />
             <div className={'content'}>
               <ul>
                 {this.state.message.map((item, index) => (
@@ -58,7 +58,7 @@ class Message extends Component {
           </div>
         )}
         {this.state.mouldShow && <Mould />}
-      </div>
+      </Main>
     )
   }
 }

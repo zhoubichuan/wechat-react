@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
 import Mould from './Mould'
 import './Find.less'
+import Main from '@/public_components/Main'
 import store from '@/store/index'
 
 const application = [
@@ -58,12 +59,13 @@ class Find extends Component {
       mouldShow: false,
       application
     }
-    let headerConfig = {
-      left: '',
-      middle: '发现',
-      right: ''
+    this.initConfig = {
+      header: {
+        left: '',
+        middle: '发现',
+        right: ''
+      }
     }
-    store.dispatch({ type: 'common', text: headerConfig })
   }
   handleClick = e => {
     this.setState({
@@ -72,7 +74,7 @@ class Find extends Component {
   }
   render() {
     return (
-      <div>
+      <Main mainConfig={this.initConfig}>
         {!this.state.mouldShow && (
           <div>
             <div className={'find'} component={'find-component'}>
@@ -92,7 +94,7 @@ class Find extends Component {
           </div>
         )}
         {this.state.mouldShow && <Mould />}
-      </div>
+      </Main>
     )
   }
 }
