@@ -17,8 +17,8 @@ class Message extends Component {
     this.initConfig = {
       header: {
         left: '',
-        middle: '微信',
-        right: ''
+        middle: '微信(93)',
+        right: '+'
       },
       search: true
     }

@@ -41,6 +41,14 @@ class PersonInformation extends Component {
         }
       ]
     }
+    this.initConfig = {
+      header: {
+        left: '<',
+        middle: '个人信息',
+        right: ''
+      },
+      footer: false
+    }
   }
   handleClick = () => {
     window.history.go(0)
@@ -52,7 +60,10 @@ class PersonInformation extends Component {
   }
   render() {
     return (
-      <Main component={'me-personinformation-component'}>
+      <Main
+        mainConfig={this.initConfig}
+        component={'me-personinformation-component'}
+      >
         <div>
           <div className={'person-information'}>
             <ul onClick={this.handleClick2}>
