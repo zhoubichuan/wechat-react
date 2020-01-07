@@ -42,7 +42,7 @@ class Find extends Component {
       header: {
         left: '',
         middle: '通讯录',
-        right: '其他'
+        right: {ico:'add-friend'}
       },
       search: true
     }

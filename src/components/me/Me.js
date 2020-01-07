@@ -30,8 +30,8 @@ class Me extends Component {
     this.initConfig = {
       header: {
         left: '',
-        middle: '我',
-        right: ''
+        middle: ' ',
+        right: {ico:'camera'}
       }
     }
   }

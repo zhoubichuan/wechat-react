@@ -18,7 +18,7 @@ class Message extends Component {
       header: {
         left: '',
         middle: '微信(93)',
-        right: '+'
+        right: {ico:'more'}
       },
       search: true
     }
