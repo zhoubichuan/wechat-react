@@ -129,43 +129,49 @@ class MoneyBag extends Component {
         }
       ]
     }
+    this.initConfig = {
+      header: {
+        left: { ico: 'back' },
+        middle: '支付',
+        right: { ico: 'more2' }
+      },
+      footer: false
+    }
   }
   handleClick = () => {
     window.history.go(0)
   }
   render() {
     return (
-      <Main component={'me-moneybag-component'}>
-        <ul className="money-application">
-          <li>
-            <img src="http://www.cdhdky.com/images/ttt.jpg" />
-            <span>收付款</span>
-          </li>
-          <li>
-            <img src="http://www.cdhdky.com/images/ttt.jpg" />
-            <span>零钱</span>
-            <span>￥10.60</span>
-          </li>
-          <li>
-            <img src="http://www.cdhdky.com/images/ttt.jpg" />
-            <span>银行卡</span>
-          </li>
-        </ul>
-        <div className={'money-bag'}>
-          <div className={'application'}>
-            {this.state.application.map((item, index) => (
-              <React.Fragment key={index}>
-                <h3>{item.title}</h3>
-                <ul>
-                  {item.data.map((item2, index2) => (
-                    <li key={index2}>
-                      <img src={item2.ico} alt={''} />
-                      <p>{item2.title}</p>
-                    </li>
-                  ))}
-                </ul>
-              </React.Fragment>
-            ))}
+      <Main mainConfig={this.initConfig} component={'me-moneybag-component'}>
+        <div className="pay">
+          <ul className="money-application">
+            <li>
+              <img src={require(`@/assets/image/scan-code.svg`)} />
+              <span>收付款</span>
+            </li>
+            <li>
+              <img src={require(`@/assets/image/money-bag.svg`)} />
+              <span>零钱</span>
+              <span>￥10.60</span>
+            </li>
+          </ul>
+          <div className={'money-bag'}>
+            <div className={'application'}>
+              {this.state.application.map((item, index) => (
+                <React.Fragment key={index}>
+                  <h3>{item.title}</h3>
+                  <ul>
+                    {item.data.map((item2, index2) => (
+                      <li key={index2}>
+                        <img src={item2.ico} alt={''} />
+                        <p>{item2.title}</p>
+                      </li>
+                    ))}
+                  </ul>
+                </React.Fragment>
+              ))}
+            </div>
           </div>
         </div>
       </Main>

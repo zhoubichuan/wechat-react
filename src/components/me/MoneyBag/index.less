@@ -1,35 +1,44 @@
-.money-application {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  padding: 10px;
-  background-color: gray;
-  li {
-    img {
-      width: 40px;
-      height: 40px;
+.pay {
+  padding: 5px;
+
+  .money-application {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 10px;
+    background-color: #72c372;
+    border-radius: 3px;
+
+    li {
+      img {
+        width: 40px;
+        height: 40px;
+      }
     }
   }
-}
-.money-bag {
-  .application {
-    h3 {
-    }
-    ul {
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      li {
-        width: calc(33.33% - 2px);
-        text-align: center;
-        border: 1px solid gainsboro;
-        padding: 10px 5px;
-        box-sizing: border-box;
-        img {
-          width: 40px;
-          height: 40px;
-        }
-        p {
+
+  .money-bag {
+    .application {
+      h3 {}
+
+      ul {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+
+        li {
+          width: calc(33.33% - 2px);
+          text-align: center;
+          border: 1px solid gainsboro;
+          padding: 10px 5px;
+          box-sizing: border-box;
+
+          img {
+            width: 40px;
+            height: 40px;
+          }
+
+          p {}
         }
       }
     }

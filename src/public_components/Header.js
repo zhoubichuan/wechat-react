@@ -8,9 +8,21 @@ class Header extends Component {
     return (
       <div className={'header'} component={'header-component'}>
         <ul>
-          <li>{left}</li>
+          <li>
+            {left.ico ? (
+              <img src={require(`@/assets/image/${left.ico}.svg`)} />
+            ) : (
+              left
+            )}
+          </li>
           <li className={'title'}>{middle}</li>
-          <li>{right.ico?<img src={require(`../assets/image/${right.ico}.svg`)}/>:right}</li>
+          <li>
+            {right.ico ? (
+              <img src={require(`../assets/image/${right.ico}.svg`)} />
+            ) : (
+              right
+            )}
+          </li>
         </ul>
       </div>
     )
