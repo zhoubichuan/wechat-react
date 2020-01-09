@@ -1,1 +1,67 @@
-{}
+{
+  "git.ignoreLegacyWarning": true,
+  "terminal.integrated.shell.windows": "C:\\Windows\\System32\\cmd.exe",
+  "files.autoSave": "onFocusChange",
+  "terminal.integrated.rendererType": "dom",
+  "explorer.confirmDelete": false,
+  "git.autofetch": true,
+  "window.zoomLevel": 0,
+  // 保存时自动格式化
+  "eslint.autoFixOnSave": true,
+  // 用来配置作用的文件类型
+  "eslint.validate": [
+    "javascript",
+    "javascriptreact",
+    {
+      "language": "html",
+      "autoFix": true
+    },
+    {
+      "language": "vue",
+      "autoFix": true
+    }
+  ],
+  "[html]": {
+    "editor.defaultFormatter": "HookyQR.beautify"
+  },
+  "[javascript]": {
+    "editor.defaultFormatter": "vscode.typescript-language-features"
+  },
+  "vsicons.projectDetection.autoReload": true,
+  "[scss]": {
+    "editor.defaultFormatter": "HookyQR.beautify"
+  },
+  "gitlens.advanced.messages": {
+    "suppressGitVersionWarning": true
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "vscode.typescript-language-features"
+  },
+  "[json]": {
+    "editor.defaultFormatter": "vscode.json-language-features"
+  },
+  "[less]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "git.enableSmartCommit": true,
+  "editor.renderIndentGuides": false,
+  "workbench.iconTheme": "vscode-icons",
+  "editor.formatOnSave": true,
+  "editor.formatOnPaste": true,
+  "editor.formatOnType": true,
+  // "beautify.config": {
+  //     "brace_style": "collapse,preserve-inline"
+  // }
+  "vetur.format.defaultFormatterOptions": {
+    "prettier": {
+      "semi": false, // 格式化不加分号
+      "singleQuote": true // 格式化以单引号为主
+    }
+  },
+  //分号和双引号确实不会再自动添加了，但是不会在方法括号之间插入空格，可以再加入这条配置即可
+  "javascript.format.insertSpaceBeforeFunctionParenthesis": true,
+  "vetur.format.defaultFormatter.js": "vscode-typescript",
+  "[javascriptreact]": {
+    "editor.defaultFormatter": "vscode.typescript-language-features"
+  },
+}

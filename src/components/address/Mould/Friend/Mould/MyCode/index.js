@@ -5,10 +5,10 @@ class Photo extends Component {
   constructor() {
     super();
   }
-    handleClick = () => {
-        window.history.go(0);
-    };
-  render() {
+  handleClick = () => {
+    window.history.go(0);
+  };
+  render () {
     return (
       <div>
         <Header>
