@@ -1,22 +1,22 @@
 import React, { Component } from "react";
-import Header from "@/public_components/Header";
+import Main from '@/public_components/Main'
 import "./index.less";
 
 class Album extends Component {
   constructor() {
     super();
+    this.initConfig = {
+      header: {
+        left: { ico: 'back' },
+        middle: '',
+        right: { ico: 'more' }
+      },
+      footer: false
+    }
   }
-  handleClick = () => {
-    window.history.go(0);
-  };
-  render() {
+  render () {
     return (
-      <div component={"me-album-component"}>
-        <Header>
-          <li onClick={this.handleClick}>我</li>
-          <li />
-          <li>...</li>
-        </Header>
+      <Main mainConfig={this.initConfig} component={"me-album-component"}>
         <div className="me-album">
           <div className="backimg">
             <img src="http://www.cdhdky.com/images/ttt.jpg" />
@@ -41,7 +41,7 @@ class Album extends Component {
             </li>
           </ul>
         </div>
-      </div>
+      </Main>
     );
   }
 }

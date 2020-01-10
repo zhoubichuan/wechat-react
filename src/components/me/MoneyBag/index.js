@@ -138,10 +138,7 @@ class MoneyBag extends Component {
       footer: false
     }
   }
-  handleClick = () => {
-    window.history.go(0)
-  }
-  render() {
+  render () {
     return (
       <Main mainConfig={this.initConfig} component={'me-moneybag-component'}>
         <div className="pay">

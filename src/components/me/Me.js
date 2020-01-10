@@ -12,7 +12,7 @@ import img5 from './ico/5.png'
 import img6 from './ico/6.png'
 
 const application = [
-  { ico: img1, title: '钱包', route: 'MeMoneyBag' },
+  { ico: img1, title: '支付', route: 'MeMoneyBag' },
   { ico: img2, title: '收藏', route: 'MeCollection' },
   { ico: img3, title: '相册', route: 'MeEmoji' },
   { ico: img4, title: '卡包', route: 'MeCardBag' },
@@ -31,7 +31,7 @@ class Me extends Component {
       header: {
         left: '',
         middle: ' ',
-        right: {ico:'camera'}
+        right: { ico: 'camera' }
       }
     }
   }
@@ -40,7 +40,7 @@ class Me extends Component {
       mouldShow: true
     })
   }
-  render() {
+  render () {
     return (
       <Main mainConfig={this.initConfig}>
         {!this.state.mouldShow && (

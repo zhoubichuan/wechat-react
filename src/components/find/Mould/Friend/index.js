@@ -1,20 +1,21 @@
 import React, { Component } from "react";
-import Header from "@/public_components/Header";
+import Main from '@/public_components/Main'
 
 class Album extends Component {
   constructor() {
     super();
+    this.initConfig = {
+      header: {
+        left: { ico: 'back' },
+        middle: '',
+        right: { ico: 'camera' }
+      },
+      footer: false
+    }
   }
-  render() {
+  render () {
     return (
-      <div component={"me-album-component"}>
-        <Header>
-          <li onClick={console.log(this.porps)}>我</li>
-          <li />
-          <li>...</li>
-        </Header>
-        <div>相册</div>
-      </div>
+      <Main mainConfig={this.initConfig}>朋友圈</Main>
     );
   }
 }

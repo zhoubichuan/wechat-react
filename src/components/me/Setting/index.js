@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
-import Header from "@/public_components/Header";
+import Main from '@/public_components/Main'
 import "./index.less";
 
 class Setting extends Component {
@@ -46,33 +46,32 @@ class Setting extends Component {
         }
       ]
     };
+    this.initConfig = {
+      header: {
+        left: { ico: 'back' },
+        middle: '设置',
+        right: { ico: 'more' }
+      },
+      search: true,
+      footer: false
+    }
   }
-  handleClick = () => {
-    window.history.go(0);
-  };
-  render() {
+  render () {
     return (
-      <div component={"me-setting-component"}>
-        <Header>
-          <li onClick={this.handleClick}>我</li>
-          <li>设置</li>
-          <li />
-        </Header>
-        <div className={"me-setting-content"}>
-          <ul>
-            {this.state.setting.map((item, index) => (
-              <li key={index}>
-                <Link to={"/Me/Setting/" + item.route}>
-                  <span className={(index == 7 || index == 8) && "center"}>
-                    {item.title}
-                  </span>
-                  {index != 7 && index != 8 && <i className="ico" />}
-                </Link>
-              </li>
-            ))}
-          </ul>
-        </div>
-      </div>
+      <Main mainConfig={this.initConfig} className={"me-setting-content"}>
+        <ul>
+          {this.state.setting.map((item, index) => (
+            <li key={index}>
+              <Link to={"/Me/Setting/" + item.route}>
+                <span className={(index == 7 || index == 8) && "center"}>
+                  {item.title}
+                </span>
+                {index != 7 && index != 8 && <i className="ico" />}
+              </Link>
+            </li>
+          ))}
+        </ul>
+      </Main>
     );
   }
 }
