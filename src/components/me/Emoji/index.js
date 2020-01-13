@@ -9,36 +9,44 @@ class Collection extends Component {
     super();
     this.state = {
       application: [{
-        title: "图片与视屏",
-        route: ""
+        img:'more',
+        title: "野萌君第四波",
+        number: "11"
       },
-      {
-        title: "链接",
-        route: ""
+        {
+          img: 'more',
+        title: "小方头机器人萌宠",
+        number: "1"
       },
-      {
-        title: "文件",
-        route: ""
+        {
+          img: 'more',
+        title: "饭粒猫与包子鸭2",
+        number: "4"
       },
-      {
-        title: "音乐",
-        route: ""
+        {
+          img: 'more',
+        title: "啊呜呜呜",
+        number: "5"
       },
-      {
-        title: "聊天记录",
-        route: ""
+        {
+          img: 'more',
+        title: "柴犬财财1",
+        number: "1"
       },
-      {
-        title: "语音",
-        route: ""
+        {
+          img: 'more',
+        title: "撩人语录",
+        number: "3"
       },
-      {
-        title: "笔记",
-        route: ""
+        {
+          img: 'more',
+        title: "胖哆啦",
+        number: "6"
       },
-      {
-        title: "位置",
-        route: ""
+        {
+          img: 'more',
+        title: "阿白酱一家过年篇",
+        number: "7"
       }
       ]
     };
@@ -53,20 +61,26 @@ class Collection extends Component {
     }
   }
   render () {
-    return (<div component={
-      "me-collection-component"
-    } >
+    return (
       <Main mainConfig={this.initConfig} className={"me-collection"} >
         <div className={"top"} >
           <ul > {
             this.state.application.map((item, index) => (
-              <li key={index} > {item.title} </li>
+              <li key={index} >
+                <div>
+                  <img src="" alt="" />
+                  <div>
+                    <p>{item.title}</p>
+                    <p>{ item.number }个朋友使用</p>
+                  </div>
+                </div>
+                <button>使用</button>
+              </li>
             ))
           }
           </ul>
         </div>
       </Main>
-    </div>
     );
   }
 }
