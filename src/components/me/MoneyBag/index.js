@@ -144,11 +144,11 @@ class MoneyBag extends Component {
         <div className="pay">
           <ul className="money-application">
             <li>
-              <img src={require(`@/assets/image/scan-code.svg`)} />
+              <img src={require(`@/assets/image/scan-code.svg`)} alt=''/>
               <span>收付款</span>
             </li>
             <li>
-              <img src={require(`@/assets/image/money-bag.svg`)} />
+              <img src={require(`@/assets/image/money-bag.svg`)} alt=''/>
               <span>零钱</span>
               <span>￥10.60</span>
             </li>

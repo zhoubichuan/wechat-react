@@ -15,9 +15,12 @@
     li {
       width: 25%;
       text-align: center;
-
       height: 40px;
-
+      img {
+        width: 16px;
+        text-align: center;
+        display: inline-block;
+      }
       a {
         display: block;
 
@@ -25,27 +28,6 @@
           color: green;
         }
       }
-    }
-
-    li:nth-of-type(2)::before {
-      background-position-x: -110px;
-    }
-
-    li:nth-of-type(3)::before {
-      background-position-x: -190px;
-    }
-
-    li:nth-of-type(4)::before {
-      background-position-x: -270px;
-    }
-
-    li::before {
-      margin: 0 auto;
-      content: "";
-      width: 20px;
-      height: 20px;
-      background: url("./footer.jpg") -31px -4px;
-      display: block;
     }
   }
 }
