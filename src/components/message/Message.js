@@ -33,7 +33,7 @@ class Message extends Component {
       mouldShow: true
     })
   }
-  render() {
+  render () {
     return (
       <Main mainConfig={this.initConfig}>
         {!this.state.mouldShow && (
@@ -44,7 +44,7 @@ class Message extends Component {
                   <li key={index} onClick={this.handleClick}>
                     <Link to={'/Message/' + item.route}>
                       <div className={'left'}>
-                        <img src={item.ico} alt="" />
+                        <img src={require(`@/assets/image/${item.ico}.svg`)} alt="" />
                         <div>
                           <p> {item.title} </p> <p> {item.tips} </p>
                         </div>

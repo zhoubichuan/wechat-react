@@ -50,27 +50,27 @@ class Setting extends Component {
       header: {
         left: { ico: 'back' },
         middle: '设置',
-        right: { ico: 'more' }
       },
-      search: true,
       footer: false
     }
   }
   render () {
     return (
-      <Main mainConfig={this.initConfig} className={"me-setting-content"}>
-        <ul>
-          {this.state.setting.map((item, index) => (
-            <li key={index}>
-              <Link to={"/Me/Setting/" + item.route}>
-                <span className={(index == 7 || index == 8) && "center"}>
-                  {item.title}
-                </span>
-                {index != 7 && index != 8 && <i className="ico" />}
-              </Link>
-            </li>
-          ))}
-        </ul>
+      <Main mainConfig={this.initConfig} >
+        <div className={"me-setting-content"}>
+          <ul>
+            {this.state.setting.map((item, index) => (
+              <li key={index}>
+                <Link to={"/Me/Setting/" + item.route}>
+                  <span className={(index === 7 || index === 8) && "center"}>
+                    {item.title}
+                  </span>
+                  {index !== 7 && index !== 8 && <i className="ico" />}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </div>
       </Main>
     );
   }

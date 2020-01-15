@@ -1,21 +1,23 @@
 import React, { Component } from "react";
-import Header from "@/public_components/Header";
+import Main from '@/public_components/Main'
 
-class Search extends Component {
+class Scan extends Component {
   constructor() {
     super();
+    this.initConfig = {
+      header: {
+        left: { ico: 'back' },
+        middle: '扫一扫',
+      },
+      footer: false
+    }
   }
-  render() {
+  render () {
     return (
-      <div component={"me-Search-component"}>
-        <Header>
-          <li onClick={console.log(this.porps)}>我</li>
-          <li />
-          <li>...</li>
-        </Header>
-        <div>相册</div>
-      </div>
+      <Main mainConfig={this.initConfig}>
+        <div component={"me-Scan-component"}>相册</div>
+      </Main>
     );
   }
 }
-export default Search;
+export default Scan;
