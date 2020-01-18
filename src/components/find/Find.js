@@ -7,47 +7,47 @@ import store from '@/store/index'
 
 const application = [
   {
-    ico: 'http://www.cdhdky.com/images/ttt.jpg',
+    ico: '朋友圈',
     title: '朋友圈',
     route: 'Friend'
   },
   {
-    ico: 'http://www.cdhdky.com/images/ttt.jpg',
+    ico: '扫一扫',
     title: '扫一扫',
     route: 'Scan'
   },
   {
-    ico: 'http://www.cdhdky.com/images/ttt.jpg',
+    ico: '摇一摇',
     title: '摇一摇',
     route: 'Shake'
   },
   {
-    ico: 'http://www.cdhdky.com/images/ttt.jpg',
+    ico: '看一看',
     title: '看一看',
     route: 'See'
   },
   {
-    ico: 'http://www.cdhdky.com/images/ttt.jpg',
+    ico: '搜一搜',
     title: '搜一搜',
     route: 'Search'
   },
   {
-    ico: 'http://www.cdhdky.com/images/ttt.jpg',
+    ico: '附近的人',
     title: '附近的人',
     route: 'Nearby'
   },
   {
-    ico: 'http://www.cdhdky.com/images/ttt.jpg',
+    ico: '购物',
     title: '购物',
     route: 'Buy'
   },
   {
-    ico: 'http://www.cdhdky.com/images/ttt.jpg',
+    ico: '游戏',
     title: '游戏',
     route: 'Game'
   },
   {
-    ico: 'http://www.cdhdky.com/images/ttt.jpg',
+    ico: '小程序',
     title: '小程序',
     route: 'SmallApp}'
   }
@@ -72,7 +72,7 @@ class Find extends Component {
       mouldShow: true
     })
   }
-  render() {
+  render () {
     return (
       <Main mainConfig={this.initConfig}>
         {!this.state.mouldShow && (
@@ -83,7 +83,7 @@ class Find extends Component {
                   {this.state.application.map((item, index) => (
                     <li key={index} onClick={this.handleClick}>
                       <Link to={'/Find/' + item.route}>
-                        <img src={item.ico} alt="" />
+                        <img src={require(`@/assets/image/${item.ico}.svg`)} alt="" />
                         <p>{item.title}</p>
                       </Link>
                     </li>

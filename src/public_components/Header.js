@@ -21,7 +21,7 @@ class Header extends Component {
           <li className={'title'}>{middle}</li>
           <li>
             {right.ico ? (
-              <img src={require(`../assets/image/${right.ico}.svg`)} alt="" />
+              <img src={require(`@/assets/image/${right.ico}.svg`)} alt="" />
             ) : (
                 right
               )}
