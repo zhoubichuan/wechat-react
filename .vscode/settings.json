@@ -44,7 +44,6 @@
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "git.enableSmartCommit": true,
-  "editor.renderIndentGuides": false,
   "workbench.iconTheme": "vscode-icons",
   "editor.formatOnSave": true,
   "editor.formatOnPaste": true,
@@ -66,5 +65,11 @@
   },
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": true
-  }
+  },
+  "workbench.colorCustomizations": {
+    "activityBar.background": "#60012A",
+    "titleBar.activeBackground": "#86013A",
+    "titleBar.activeForeground": "#FFFBFD"
+  },
+  "editor.guides.indentation": false
 }

@@ -5,16 +5,16 @@ import SendRedBagBody from './SendRedBagPart/SendRedBagBody'
 import './index.less'
 
 class SendPage extends Component {
-  constructor() {
-    super()
-  }
-  getSendRedBagShowChild(val) {
+  // constructor() {
+  //   super()
+  // }
+  getSendRedBagShowChild (val) {
     this.props.sendSendRedBagShow(val)
   }
-  getSubmit(val) {
+  getSubmit (val) {
     this.props.sendSubmitData(val)
   }
-  render() {
+  render () {
     return (
       <div className={'send-red-bag'}>
         <SendRedBagHeader

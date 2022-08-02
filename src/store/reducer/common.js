@@ -1,6 +1,6 @@
 // 建议reducer使用这种结构
 import {
-  SETHEADCONFIG
+  // SETHEADCONFIG
 } from '@/store/action/actionTypes'
 
 // 1.定义默认数据
@@ -19,8 +19,8 @@ const reducer = (state = initialState, action) => {
       return {
         ...state, headerConfig: action.text
       }
-      default:
-        return state
+    default:
+      return state
   }
 }
 // 3.导出

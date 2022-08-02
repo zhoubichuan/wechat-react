@@ -1,13 +1,13 @@
 import React, { Component } from "react";
 
 class SendRedBagHeader extends Component {
-  constructor() {
-    super();
-  }
+  // constructor() {
+  //   super();
+  // }
   handleClick = () => {
     this.props.sendSendRedBagShowChild({ SendRedBagShow: false });
   };
-  render() {
+  render () {
     return (
       <header className={"header"}>
         <span className={"cancle"} onClick={this.handleClick}>

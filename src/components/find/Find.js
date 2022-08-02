@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 import Mould from './Mould'
 import './Find.less'
 import Main from '@/public_components/Main'
-import store from '@/store/index'
+// import store from '@/store/index'
 
 const application = [
   {

@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import store from '@/store'
+// import store from '@/store'
 import './Header.less'
 
 class Header extends Component {
@@ -15,16 +15,16 @@ class Header extends Component {
             {left.ico ? (
               <img src={require(`@/assets/image/${left.ico}.svg`)} alt="" />
             ) : (
-                left
-              )}
+              left
+            )}
           </li>
           <li className={'title'}>{middle}</li>
           <li>
             {right.ico ? (
               <img src={require(`@/assets/image/${right.ico}.svg`)} alt="" />
             ) : (
-                right
-              )}
+              right
+            )}
           </li>
         </ul>
       </div>

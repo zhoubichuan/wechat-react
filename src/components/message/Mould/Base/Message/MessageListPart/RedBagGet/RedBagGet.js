@@ -1,14 +1,14 @@
 import React, { Component } from "react";
 class RedBagGet extends Component {
-  constructor() {
-    super();
-  }
+  // constructor() {
+  //   super();
+  // }
 
   handleClick = () => {
     this.props.sendShowRedBagPop({ showRedBagPop: true });
     this.props.sendScrollStopChild({ scrollStop: true });
   };
-  render() {
+  render () {
     return (
       <div className={"red-bag"} onClick={this.handleClick}>
         <div className={"bag"}>

@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { HashRouter as Router, Route, Switch } from "react-router-dom";
+import { Route, Switch } from "react-router-dom";
 import Friend from "./Friend";
 import Scan from "./Scan";
 import Shake from "./Shake";
@@ -11,10 +11,10 @@ import Game from "./Game";
 import SmallApp from "./SmallApp";
 
 class Mould extends Component {
-  constructor() {
-    super();
-  }
-  render() {
+  // constructor() {
+  //   super();
+  // }
+  render () {
     return (
       <div component={"me-mould-component"}>
         <Switch>

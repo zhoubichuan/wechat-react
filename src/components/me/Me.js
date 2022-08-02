@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
 import './Me.less'
-import store from '@/store/index'
+// import store from '@/store/index'
 import Main from '@/public_components/Main'
 
 import img1 from './ico/1.png'

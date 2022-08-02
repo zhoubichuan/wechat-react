@@ -6,11 +6,11 @@
   "homepage": "http://zhoubichuan.github.io/Project-React-weChat/",
   "private": true,
   "scripts": {
-    "start": "node scripts/start.js",
+    "dev": "node scripts/start.js",
     "build": "node scripts/build.js",
     "test": "node scripts/test.js --env=jsdom",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist"
+    "deploy": "bash deploy.sh"
   },
   "dependencies": {
     "autoprefixer": "7.1.6",

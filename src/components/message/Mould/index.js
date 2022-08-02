@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { HashRouter as Router, Route, Switch } from "react-router-dom";
+import { Route, Switch } from "react-router-dom";
 import Qun from "./Qun";
 import Scan from "./Scan";
 import Shake from "./Shake";
@@ -12,10 +12,10 @@ import SmallApp from "./SmallApp";
 import Application from "./Base/Application";
 
 class Mould extends Component {
-  constructor() {
-    super();
-  }
-  render() {
+  // constructor() {
+  //   super();
+  // }
+  render () {
     return (
       <div component={"message-mould-component"}>
         <Switch>

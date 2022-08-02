@@ -2,10 +2,10 @@ import React, { Component } from "react";
 import Header from "@/public_components/Header";
 
 class Buy extends Component {
-  constructor() {
-    super();
-  }
-  render() {
+  // constructor() {
+  //   super();
+  // }
+  render () {
     return (
       <div component={"me-Buy-component"}>
         <Header>

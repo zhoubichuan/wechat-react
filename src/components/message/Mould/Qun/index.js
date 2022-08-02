@@ -3,13 +3,13 @@ import Header from "@/public_components/Header";
 import Message from "../Base/Message";
 
 class Album extends Component {
-  constructor() {
-    super();
-  }
+  // constructor() {
+  //   super();
+  // }
   handleClick = () => {
     window.history.go(0);
   };
-  render() {
+  render () {
     return (
       <div component={"me-album-component"}>
         <Header>

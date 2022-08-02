@@ -5,9 +5,9 @@ import Footer from '@/public_components/Footer'
 import './Main.less'
 
 class Photo extends Component {
-  constructor() {
-    super()
-  }
+  // constructor() {
+  //   super()
+  // }
   handleClick = () => {
     window.history.go(0)
   }

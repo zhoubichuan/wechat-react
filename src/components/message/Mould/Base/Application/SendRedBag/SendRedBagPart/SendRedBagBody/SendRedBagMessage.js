@@ -1,14 +1,14 @@
 import React, { Component } from "react";
 /* 非受控组件 */
 class RedBagMessage extends Component {
-  constructor() {
-    super();
-  }
+  // constructor() {
+  //   super();
+  // }
   handleChange = () => {
     let redBagMessage = this.refs.redBagMessage.value || "恭喜发财，大吉大利";
     this.props.sendRedBagMessage({ redBagMessage });
   };
-  render() {
+  render () {
     return (
       <li className={"tips"}>
         <input

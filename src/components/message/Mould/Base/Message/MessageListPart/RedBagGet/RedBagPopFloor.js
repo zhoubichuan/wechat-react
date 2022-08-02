@@ -1,13 +1,13 @@
 import React, { Component } from "react";
 import "./pop.less";
 class ReadBagPopFloor extends Component {
-  constructor() {
-    super();
-  }
+  // constructor() {
+  //   super();
+  // }
   handleClick = () => {
     this.props.sendShowRedBagPopFloor({ showRedBagPop: false });
   };
-  render() {
+  render () {
     return (
       <div className={"pop-floor show"}>
         <div className={"mask"} onClick={this.handleClick} />

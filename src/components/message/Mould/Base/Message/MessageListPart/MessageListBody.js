@@ -1,6 +1,6 @@
 import React, { Component } from "react";
-import RedBagReceive from "./RedBagGet/RedBagReceive";
-import PropTypes from "prop-types";
+// import RedBagReceive from "./RedBagGet/RedBagReceive";
+// import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import RedBagPopFloor from "./RedBagGet/RedBagPopFloor.js";
 import RedBagGet from "./RedBagGet/RedBagGet.js";
@@ -16,22 +16,22 @@ class MessageListBody extends Component {
     };
   }
 
-  getShowRedBagPop(val) {
+  getShowRedBagPop (val) {
     this.setState(val);
   }
-  getShowRedBagPopFloor(val) {
+  getShowRedBagPopFloor (val) {
     this.setState(val);
   }
-  getScrollStopChild(val) {
+  getScrollStopChild (val) {
     this.props.sendScrollStop(val);
   }
-  render() {
+  render () {
     return (
       <div>
         <ul className={"information"} onClick={this.handleClick}>
           {this.props.messageData.map((val, index) => (
             <li key={index} className={val.self ? "right" : ""}>
-              <img src={val.pho} className={"photo"} />
+              <img alt="" src={val.pho} className={"photo"} />
               <div className={"content"}>
                 <p className={"name"}>{val.name}</p>
                 {!val.redBag.redBag && <p>{val.message}</p>}

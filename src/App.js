@@ -1,11 +1,9 @@
-import ReactDOM from 'react-dom'
 import { Provider } from 'react-redux'
 import store from '@/store'
 // import Header from '@/public_components/Header'
 // import Footer from '@/public_components/Footer'
 import React, { Component } from 'react'
 import {
-  BrowserRouter,
   Route,
   Switch,
   BrowserRouter as Router
@@ -29,206 +27,206 @@ import MeMoneyBag from '@/components/Me/MoneyBag'
 import MeSetting from '@/components/Me/Setting'
 import Login from '@/components/Login/Login'
 
-const routeData = [
-  {
-    path: '/',
-    component: Message
-  },
-  {
-    path: '/Message',
-    component: Message
-  },
-  {
-    path: '/MessageSetting:id',
-    component: Message
-  },
-  {
-    path: '/MessagePeople:id',
-    component: Message
-  },
-  {
-    path: '/people:id',
-    component: Message
-  },
-  {
-    path: '/people:id',
-    component: Message
-  },
-  {
-    path: '/address',
-    component: Address
-  },
-  {
-    path: '/addressFriends',
-    component: Address
-  },
-  {
-    path: '/addressNumber',
-    component: Address
-  },
-  {
-    path: '/addressTalk',
-    component: Address
-  },
-  {
-    path: '/addressTips',
-    component: Address
-  },
-  {
-    path: '/addressPeople:id',
-    component: Address
-  },
-  {
-    path: '/addressPeopleSettingAndTips',
-    component: Address
-  },
-  {
-    path: '/addressPeopleFriend:id',
-    component: Address
-  },
-  {
-    path: '/addressPeopleMoreInformation:id',
-    component: Address
-  },
-  {
-    path: '/sendInformation',
-    component: Address
-  },
-  {
-    path: '/find',
-    component: Find
-  },
-  {
-    path: '/findFriend',
-    component: Find
-  },
-  {
-    path: '/findGaMe',
-    component: Find
-  },
-  {
-    path: '/findNearby',
-    component: Find
-  },
-  {
-    path: '/findProgram',
-    component: Find
-  },
-  {
-    path: '/findScan',
-    component: Find
-  },
-  {
-    path: '/findSearch',
-    component: Find
-  },
-  {
-    path: '/findShake',
-    component: Find
-  },
-  {
-    path: '/findShop',
-    component: Find
-  },
-  {
-    path: '/Me',
-    component: Me
-  },
-  {
-    path: '/MeInformation',
-    component: MeInformation
-  },
-  {
-    path: '/MeInformationAddress',
-    component: MeInformationAddress
-  },
-  {
-    path: '/MeInformationCode',
-    component: MeInformationCode
-  },
-  {
-    path: '/MeInformationMore',
-    component: MeInformationMore
-  },
-  {
-    path: '/MeInformationName',
-    component: MeInformationName
-  },
-  {
-    path: '/MeInformationPhoto',
-    component: MeInformationPhoto
-  },
-  {
-    path: '/MeInformationNumber',
-    component: MeInformationNumber
-  },
-  {
-    path: '/MeAlbum',
-    component: MeAlbum
-  },
-  {
-    path: '/MeCardBag',
-    component: MeCardBag
-  },
-  {
-    path: '/MeCollection',
-    component: MeCollection
-  },
-  {
-    path: '/MeEmoji',
-    component: MeEmoji
-  },
-  {
-    path: '/MeEmoji',
-    component: MeEmoji
-  },
-  {
-    path: '/MeMoneyBag',
-    component: MeMoneyBag
-  },
-  {
-    path: '/MeSetting',
-    component: MeSetting
-  },
-  {
-    path: '/MeSettingAccountSafe',
-    component: Me
-  },
-  {
-    path: '/MeSettingNewMessageNote',
-    component: Me
-  },
-  {
-    path: '/MeSettingPrivacy',
-    component: Me
-  },
-  {
-    path: '/MeSettingCommon',
-    component: Me
-  },
-  {
-    path: '/MeSettingHelpAndFeedback',
-    component: Me
-  },
-  {
-    path: '/MeSettingAboutWeChate',
-    component: Me
-  },
-  {
-    path: '/MeSettingWeChatePlugin',
-    component: Me
-  },
-  {
-    path: '/MeSettingChangeAcount',
-    component: Me
-  },
-  {
-    path: '/MeSettingOutLogin',
-    component: Me
-  }
-]
+// const routeData = [
+//   {
+//     path: '/',
+//     component: Message
+//   },
+//   {
+//     path: '/Message',
+//     component: Message
+//   },
+//   {
+//     path: '/MessageSetting:id',
+//     component: Message
+//   },
+//   {
+//     path: '/MessagePeople:id',
+//     component: Message
+//   },
+//   {
+//     path: '/people:id',
+//     component: Message
+//   },
+//   {
+//     path: '/people:id',
+//     component: Message
+//   },
+//   {
+//     path: '/address',
+//     component: Address
+//   },
+//   {
+//     path: '/addressFriends',
+//     component: Address
+//   },
+//   {
+//     path: '/addressNumber',
+//     component: Address
+//   },
+//   {
+//     path: '/addressTalk',
+//     component: Address
+//   },
+//   {
+//     path: '/addressTips',
+//     component: Address
+//   },
+//   {
+//     path: '/addressPeople:id',
+//     component: Address
+//   },
+//   {
+//     path: '/addressPeopleSettingAndTips',
+//     component: Address
+//   },
+//   {
+//     path: '/addressPeopleFriend:id',
+//     component: Address
+//   },
+//   {
+//     path: '/addressPeopleMoreInformation:id',
+//     component: Address
+//   },
+//   {
+//     path: '/sendInformation',
+//     component: Address
+//   },
+//   {
+//     path: '/find',
+//     component: Find
+//   },
+//   {
+//     path: '/findFriend',
+//     component: Find
+//   },
+//   {
+//     path: '/findGaMe',
+//     component: Find
+//   },
+//   {
+//     path: '/findNearby',
+//     component: Find
+//   },
+//   {
+//     path: '/findProgram',
+//     component: Find
+//   },
+//   {
+//     path: '/findScan',
+//     component: Find
+//   },
+//   {
+//     path: '/findSearch',
+//     component: Find
+//   },
+//   {
+//     path: '/findShake',
+//     component: Find
+//   },
+//   {
+//     path: '/findShop',
+//     component: Find
+//   },
+//   {
+//     path: '/Me',
+//     component: Me
+//   },
+//   {
+//     path: '/MeInformation',
+//     component: MeInformation
+//   },
+//   {
+//     path: '/MeInformationAddress',
+//     component: MeInformationAddress
+//   },
+//   {
+//     path: '/MeInformationCode',
+//     component: MeInformationCode
+//   },
+//   {
+//     path: '/MeInformationMore',
+//     component: MeInformationMore
+//   },
+//   {
+//     path: '/MeInformationName',
+//     component: MeInformationName
+//   },
+//   {
+//     path: '/MeInformationPhoto',
+//     component: MeInformationPhoto
+//   },
+//   {
+//     path: '/MeInformationNumber',
+//     component: MeInformationNumber
+//   },
+//   {
+//     path: '/MeAlbum',
+//     component: MeAlbum
+//   },
+//   {
+//     path: '/MeCardBag',
+//     component: MeCardBag
+//   },
+//   {
+//     path: '/MeCollection',
+//     component: MeCollection
+//   },
+//   {
+//     path: '/MeEmoji',
+//     component: MeEmoji
+//   },
+//   {
+//     path: '/MeEmoji',
+//     component: MeEmoji
+//   },
+//   {
+//     path: '/MeMoneyBag',
+//     component: MeMoneyBag
+//   },
+//   {
+//     path: '/MeSetting',
+//     component: MeSetting
+//   },
+//   {
+//     path: '/MeSettingAccountSafe',
+//     component: Me
+//   },
+//   {
+//     path: '/MeSettingNewMessageNote',
+//     component: Me
+//   },
+//   {
+//     path: '/MeSettingPrivacy',
+//     component: Me
+//   },
+//   {
+//     path: '/MeSettingCommon',
+//     component: Me
+//   },
+//   {
+//     path: '/MeSettingHelpAndFeedback',
+//     component: Me
+//   },
+//   {
+//     path: '/MeSettingAboutWeChate',
+//     component: Me
+//   },
+//   {
+//     path: '/MeSettingWeChatePlugin',
+//     component: Me
+//   },
+//   {
+//     path: '/MeSettingChangeAcount',
+//     component: Me
+//   },
+//   {
+//     path: '/MeSettingOutLogin',
+//     component: Me
+//   }
+// ]
 class App extends Component {
-  render() {
+  render () {
     return (
       <Provider store={store}>
         <Router>

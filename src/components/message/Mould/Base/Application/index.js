@@ -52,12 +52,12 @@ class MessageListFooter extends Component {
     this.setState({ SendRedBagShow: val.SendRedBagShow });
   };
   handleClickApp = e => {
-    if (e.target.className == "ico5") {
+    if (e.target.className === "ico5") {
       // this.props.sendSendRedBagShow({ SendRedBagShow: true });
       this.setState({ applicationShow: false, SendRedBagShow: true });
     }
   };
-  render() {
+  render () {
     return (
       <div>
         <div className="message-application">
@@ -83,7 +83,7 @@ class MessageListFooter extends Component {
         {this.state.SendRedBagShow && (
           <SendRedBag
             sendSendRedBagShow={val => this.getSendRedBagShow(val)}
-            // sendSubmitData={val => this.getSubmitData(val)}
+          // sendSubmitData={val => this.getSubmitData(val)}
           />
         )}
       </div>

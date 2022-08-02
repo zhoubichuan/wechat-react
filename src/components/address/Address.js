@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import Main from '@/public_components/Main'
 import './Address.less'
-import store from '@/store/index'
+// import store from '@/store/index'
 
 const application = [
   { ico: '新的朋友', title: '新的朋友' },

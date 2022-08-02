@@ -2,13 +2,13 @@ import React, { Component } from "react";
 import Header from "@/public_components/Header";
 
 class Nearby extends Component {
-  constructor() {
-    super();
-  }
+  // constructor() {
+  //   super();
+  // }
   handleClick = () => {
     window.history.go(0);
   };
-  render() {
+  render () {
     return (
       <div component={"me-Nearby-component"}>
         <Header>

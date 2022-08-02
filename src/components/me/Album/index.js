@@ -19,10 +19,10 @@ class Album extends Component {
       <Main mainConfig={this.initConfig} component={"me-album-component"}>
         <div className="me-album">
           <div className="backimg">
-            <img src="http://www.cdhdky.com/images/ttt.jpg" />
+            <img alt="" src="http://www.cdhdky.com/images/ttt.jpg" />
             <div className="photo">
               <p>会跑的鸡腿</p>
-              <img src="http://www.cdhdky.com/images/ttt.jpg" />
+              <img alt="" src="http://www.cdhdky.com/images/ttt.jpg" />
             </div>
           </div>
           <ul>
@@ -35,7 +35,7 @@ class Album extends Component {
                 <p>asdfasdfasdfasd</p>
               </div>
               <div className="rigth">
-                <img src="" />
+                <img alt="" src="" />
                 <p>1234123</p>
               </div>
             </li>

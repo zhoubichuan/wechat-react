@@ -2,10 +2,10 @@ import React, { Component } from "react";
 import Header from "@/public_components/Header";
 
 class See extends Component {
-  constructor() {
-    super();
-  }
-  render() {
+  // constructor() {
+  //   super();
+  // }
+  render () {
     return (
       <div component={"me-See-component"}>
         <Header>
