@@ -2,13 +2,13 @@ import React, { Component } from "react";
 import Header from "@/public_components/Header";
 
 class Photo extends Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
   }
   handleClick = () => {
     window.history.go(0);
   };
-  render() {
+  render () {
     return (
       <div>
         <Header>

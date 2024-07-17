@@ -64,7 +64,7 @@
     "editor.defaultFormatter": "vscode.typescript-language-features"
   },
   "editor.codeActionsOnSave": {
-    "source.fixAll.eslint": true
+    "source.fixAll.eslint": "explicit"
   },
   "workbench.colorCustomizations": {
     "activityBar.background": "#60012A",

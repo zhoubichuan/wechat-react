@@ -1,9 +1,9 @@
 {
-  "name": "weChat-React",
+  "name": "wechat-react",
   "author": "zhoubichuan",
   "email": "zhoubichuan@icloud.com",
   "version": "0.1.0",
-  "homepage": "http://zhoubichuan.github.io/Project-React-weChat/",
+  "homepage": "http://zhoubichuan.github.io/wechat-react/",
   "private": true,
   "scripts": {
     "dev": "node scripts/start.js",
